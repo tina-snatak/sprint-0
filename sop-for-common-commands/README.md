@@ -1,29 +1,36 @@
 # Linux Common Commands
 
-| Author | Created on | Version | Last updated by | Last edited on |
-|--------|-------------|---------|------------------|----------------|
-| Tina Bhatnagar | 19-07-2025 | Version 1 | Tina Bhatnagar | 19-07-2025 |
+| Author          | Created on | Version   | Last updated by | Last edited on |
+|----------------|------------|-----------|------------------|----------------|
+| Tina Bhatnagar | 19-07-2025 | Version 1 | Tina Bhatnagar   | 19-07-2025     |
 
 ---
 
 ## Introduction
 
-This document outlines the basic usage of Linux common commands. These commands serve as the foundation for navigating and interacting with a Linux system through the terminal. It helps developers, DevOps engineers, and system administrators perform essential tasks efficiently.
+This document provides a comprehensive list of essential Linux commands that are frequently used in day-to-day system administration, development, and DevOps operations. These commands allow users to interact with the Linux operating system via terminal, perform file operations, manage users, configure permissions, monitor processes, and much more. Mastery of these commands is fundamental for anyone working in a Linux environment.
 
 ---
 
 ## Purposes
 
-To demonstrate how commonly used Linux commands can be applied to perform day-to-day administrative, file management, process control, and system monitoring tasks efficiently in real-world scenarios.
+This documentation serves as a quick reference and onboarding guide for team members and beginners. It outlines the purpose, usage, and syntax of common Linux commands used in practical scenarios such as:
+
+- Navigating the file system
+- Managing files and directories
+- Monitoring system performance
+- Controlling permissions and access
+- Managing packages and dependencies
 
 ---
 
 ## Key Features
 
-- Easy-to-use and essential for beginners and professionals
-- Helps automate repetitive system tasks
-- Facilitates file and user management
-- Simplifies system monitoring and performance tracking
+- Covers all foundational Linux command categories
+- Clear and structured tabular format for readability
+- Ideal for developers, admins, and DevOps professionals
+- Encourages best practices in command-line usage
+- Enhances troubleshooting and monitoring capabilities
 
 ---
 
@@ -31,36 +38,36 @@ To demonstrate how commonly used Linux commands can be applied to perform day-to
 
 ### Pre-requisites
 
-| License Type | Description | Commercial Use | Open Source |
-|--------------|-------------|----------------|-------------|
-| GNU General Public License v3.0 | Free and open for public use and modification | Yes | Yes |
+| License Type               | Description                                    | Commercial Use | Open Source |
+|----------------------------|------------------------------------------------|----------------|-------------|
+| GNU General Public License v3.0 | Free and open for public use and modification | Yes            | Yes         |
 
 ---
 
 ## Software Overview
 
-| Software | Version     |
-|----------|-------------|
-| Linux Terminal | N/A (Built-in) |
+| Software       | Version    |
+|----------------|------------|
+| Linux Terminal | Built-in   |
 
 ---
 
 ## System Requirement
 
-| Requirement           | Minimum Recommendation     |
-|-----------------------|----------------------------|
-| Processor/Instance Type | Dual-Core/T2.micro instance |
-| RAM                   | 1 GB or Higher             |
-| ROM (Disk Space)      | 5 GB or Higher             |
-| OS Required           | Ubuntu/CentOS (Any Stable Version) |
+| Requirement             | Minimum Recommendation    |
+|--------------------------|---------------------------|
+| Processor/Instance Type  | Dual-Core / T2.micro       |
+| RAM                      | 1 GB or Higher             |
+| ROM (Disk Space)         | 5 GB or Higher             |
+| OS Required              | Ubuntu / CentOS (Stable)   |
 
 ---
 
 ## Important Ports
 
-| Ports | Description |
-|-------|-------------|
-| 22    | Used for SSH connections to remotely access the Linux terminal |
+| Port | Description                                  |
+|------|----------------------------------------------|
+| 22   | SSH remote terminal access (default port)    |
 
 ---
 
@@ -68,101 +75,29 @@ To demonstrate how commonly used Linux commands can be applied to perform day-to
 
 ### Run-time Dependency
 
-| Run-time Dependency | Version | Description |
-|---------------------|---------|-------------|
-| bash                | 4.x+    | Required for executing shell commands |
+| Dependency | Version | Description                         |
+|------------|---------|-------------------------------------|
+| bash       | 4.x+    | Command interpreter for shell usage |
 
 ### Other Dependency
 
-| Other Dependency | Version | Description |
-|------------------|---------|-------------|
-| coreutils         | latest  | Provides basic commands like `ls`, `cp`, `mv`, `rm`, etc. |
+| Dependency  | Version | Description                                           |
+|-------------|---------|-------------------------------------------------------|
+| coreutils   | latest  | Collection of essential commands like `ls`, `cp`, etc |
 
 ---
 
 ## How to Setup/Install Linux Command Utilities
 
-Linux common commands are pre-installed in most distributions. However, if missing, install `coreutils` package:
+Most common commands come pre-installed in all major Linux distros. If not, install `coreutils`:
 
 ```bash
-# For Debian/Ubuntu
+# Debian/Ubuntu
 sudo apt update
 sudo apt install coreutils
 
-# For RHEL/CentOS
+# CentOS/RHEL
 sudo yum install coreutils
-````
-
----
-
-## Configuration
-
-No explicit configuration is required for basic Linux commands. However, you can customize your shell environment in:
-
-* `~/.bashrc`
-* `~/.zshrc`
-
-Example:
-
-```bash
-alias ll='ls -la'
-```
-
----
-
-## Maintenance
-
-Use the following commands for updates and upgrades:
-
-```bash
-# For update
-sudo apt update
-sudo yum update
-
-# To upgrade packages
-sudo apt upgrade
-sudo yum upgrade
-```
-
----
-
-## Monitoring
-
-Check whether commands are available and running:
-
-```bash
-which ls
-which top
-```
-
-You can verify system processes:
-
-```bash
-top
-ps aux
-```
-
-Check logs if any issue occurs:
-
-```bash
-journalctl -xe
-dmesg
-```
-
----
-
-## Disaster Recovery
-
-* Maintain backup of user-created shell scripts.
-* In case of corrupted shell config files, restore defaults using:
-
-```bash
-cp /etc/skel/.bashrc ~/
-```
-
-* Use version control for script-based automation.
-
----
 
 ## High Availability
 
