@@ -63,12 +63,16 @@ This SOP covers frequently used commands related to:
 |-------------------|--------------------------------------------|--------------------------|
 | `uname -a`        | Show system information                    | `uname -a`               |
 | `df -h`           | Display disk space usage                   | `df -h`                  |
-| `du -sh <dir>`    | Show size of a directory                   | `du -sh /home/tina`      |
+| `du -sh <dir>`    | Show size of a directory                   | `du -sh tinabh`          |
 | `free -h`         | Display memory usage                       | `free -h`                |
-| `uptime`          | Show how long the system has been running | `uptime`                 |
+| `uptime`          | Show how long the system has been running | `uptime`                  |
 | `hostname`        | Show or set the system hostname            | `hostname`               |
 | `lsb_release -a`  | Display details about Ubuntu version       |  `lsb_release -a`        |
 | `who`             | Show who is logged in                      | `who`                    |
+
+
+<img width="1353" height="703" alt="image" src="https://github.com/user-attachments/assets/e31444f6-b739-4a1f-9f41-0087c4aeb24b" />
+
 
 ---
 
