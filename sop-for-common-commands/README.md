@@ -208,13 +208,13 @@ This SOP covers frequently used commands related to:
 
 ## FAQs
 
-**Q. Is this application free?**
+#### Q. Is this application free?
 Yes, it is open-source and pre-installed in most Linux distributions.
 
-**Q. Can I use these commands on all Linux distributions?**
+#### Q. Can I use these commands on all Linux distributions?
 Yes, most commands are compatible across distributions like Ubuntu, CentOS, Debian, etc.
 
-**Q. Do I need internet to run Linux commands?**
+#### Q. Do I need internet to run Linux commands?
 No, basic commands work offline. Internet is only needed for package installation and updates.
 
 ---
@@ -231,8 +231,8 @@ No, basic commands work offline. Internet is only needed for package installatio
 
 | Links                                                                                                                        | Descriptions                    |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html](https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html) | Linux command documentation     |
-| [https://man7.org/linux/man-pages/](https://man7.org/linux/man-pages/)                                                       | Manual pages for Linux commands |
+| [https://linuxcommand.org/lc3_man_page_index.php](https://linuxcommand.org/lc3_man_page_index.php)                           | Linux command documentation     |
+| [https://linuxhandbook.com/a-to-z-linux-commands/](https://linuxhandbook.com/a-to-z-linux-commands/)                         | A TO Z Linux commands |
 | [https://www.geeksforgeeks.org/linux-commands/](https://www.geeksforgeeks.org/linux-commands/)                               | Tutorials and examples          |
 
 
