@@ -70,6 +70,8 @@ This SOP covers frequently used commands related to:
 | `lsb_release -a`  | Display details about Ubuntu version       |  `lsb_release -a`        |
 | `who`             | Show who is logged in                      | `who`                    |
 
+---
+
 
 <img width="1353" height="703" alt="image" src="https://github.com/user-attachments/assets/e31444f6-b739-4a1f-9f41-0087c4aeb24b" />
 
