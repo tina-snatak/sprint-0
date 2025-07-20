@@ -2,6 +2,7 @@
 
 This document serves as a detailed reference guide for commonly used Ubuntu commands, structured for quick and easy access.
 
+<img width="474" height="166" alt="image" src="https://github.com/user-attachments/assets/bd4e93d9-4bdf-42e1-9435-452f9eed7d22" />
 
 ---
 ## Author Information
