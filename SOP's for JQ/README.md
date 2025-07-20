@@ -139,7 +139,8 @@ jq '.user.name' data.json
 jq '.user.address.city' data.json
 ```
 
-<img width="742" height="81" alt="image" src="https://github.com/user-attachments/assets/6bee917a-5075-4e8e-a8c7-bb096af82520" />
+<img width="830" height="77" alt="image" src="https://github.com/user-attachments/assets/ee826f4f-63a5-462d-942e-a24b18d4099a" />
+
 
 
 - ### Loop Over Arrays
