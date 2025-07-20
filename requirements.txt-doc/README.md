@@ -160,8 +160,6 @@ requests==2.28.1 \
 | package>=version       | Installs the specified version or newer              | sqlalchemy>=1.4                                        |
 | package<=version       | Installs the specified version or older              | django<=3.2                                            |
 | package\~=version      | Compatible release — allows minor updates            | pandas\~=1.3.0                                         |
-| -e git+URL#egg=package | Installs directly from a Git repo in "editable" mode | -e git+[https://github.com/](https://github.com/)...   |
-| --index-url <url>      | Specifies a custom package index                     | --index-url [https://example.com](https://example.com) |
 | --find-links <url>     | Finds packages in local/remote locations             | --find-links ./packages                                |
 | # comment              | Inline comments for readability                      | flask==2.1.3  # Web framework                          |
 | -r otherfile.txt       | Includes another requirements file                   | -r dev-requirements.txt                                |
