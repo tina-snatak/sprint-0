@@ -64,7 +64,7 @@ If this command returns a version (e.g., jq-1.6), you already have it installed.
 sudo apt install jq -y
 ```
 
-<img width="1316" height="223" alt="Screenshot from 2025-07-20 22-38-02" src="https://github.com/user-attachments/assets/8925ee80-521a-4e8a-8f18-2a432422dd98" />
+<img width="765" height="235" alt="image" src="https://github.com/user-attachments/assets/5be418cf-cc6e-4874-bd39-afa3fa916e90" />
 
 
 - ### RedHat
