@@ -89,12 +89,12 @@ Save the following content in a file called data.json for practice:
 ```json
 {
   "user": {
-    "name": "Sneha",
+    "name": "Tina",
     "roles": ["admin", "editor"],
-    "age": 21,
+    "age": 23,
     "address": {
-      "city": "Haldwani",
-      "zip": "10001"
+      "city": "Moradabad",
+      "zip": "244001"
     }
   },
   "items": [
