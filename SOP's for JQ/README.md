@@ -260,14 +260,13 @@ jq bridges the gap between human-readable JSON and machine-level automation need
 ---
 ## Contact Information
 
-| Name         | Email Address                                 |
-|--------------|-----------------------------------------------|
-| Sneha Joshi  | sneha.joshi.snaatak@mygurukulam.co            |
-
+| Name           | Email address                                                         |
+| -------------- | --------------------------------------------------------------------- |
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co) |
 ---
 
 ## References
-| *Title*                        | *Link*                                        |
+| **Title**                        | **Link**                                        |
 |----------------------------------|-------------------------------------------------|
 | Official jq Manual | [Visit](https://stedolan.github.io/jq/manual/)  |
 | jq GitHub Releases | [Visit](https://github.com/jqlang/jq/blob/master/)  |
