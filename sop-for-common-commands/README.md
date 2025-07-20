@@ -85,10 +85,16 @@ This SOP covers frequently used commands related to:
 | `apt update`              | Update package list                    | `sudo apt update`              |
 | `apt upgrade`             | Upgrade installed packages             | `sudo apt upgrade`             |
 | `apt install <pkg>`       | Install a new package                  | `sudo apt install curl`        |
-| `apt remove <pkg>`        | Remove a package                       | `sudo apt remove nginx`        |
+| `apt remove <pkg>`        | Remove a package                       | `sudo apt remove apache`        |
 | `apt search <pkg>`        | Search for a package                   | `apt search htop`              |
 
 ---
+
+<img width="1065" height="421" alt="image" src="https://github.com/user-attachments/assets/aa236ffd-d4e6-4b8f-a50f-667721fe4b78" />
+<img width="927" height="645" alt="image" src="https://github.com/user-attachments/assets/46b94c2d-b5fc-474f-b5fe-5b6102484cee" />
+
+---
+
 
 ### 3. **System Shutdown and Reboot**
 
