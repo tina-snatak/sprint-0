@@ -1,8 +1,36 @@
-# Linux Common Commands
+# SOP for Ubuntu Common Commands
 
-| Author          | Created on | Version   | Last updated by | Last edited on |
-|----------------|------------|-----------|------------------|----------------|
-| Tina Bhatnagar | 19-07-2025 | Version 1 | Tina Bhatnagar   | 19-07-2025     |
+This document serves as a detailed reference guide for commonly used Ubuntu commands, structured for quick and easy access.
+
+
+---
+## Author Information
+
+| Created by      | Created on     | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer   |    L2 Reviewer                 |
+|-----------------|----------------|------------------|-------------------|--------------------|-----------------|---------------|--------------------------------|
+| Tina Bhatnagar  |  18-07-2025    | V 1.0            |     18-07-2025    |  Rohit Chopra      | Akshit/Nitik    |  Taran        |  Abhishek dubey/ Rishabh sharma|
+
+---
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Scope](#scope)
+3. [Commands with Description and Examples](#commands-with-description-and-examples)
+   - [System Commands](#1-system-commands)
+   - [Package Management](#2-package-management)
+   - [System Shutdown and Reboot](#3-system-shutdown-and-reboot)
+   - [Navigation Commands](#4-navigation-commands)
+   - [File & Directory Operations](#5-file--directory-operations)
+   - [File Content Viewing](#6-file-content-viewing)
+   - [User Management](#7-user-management)
+   - [Permissions Management](#8-permissions-management)
+   - [Process Management](#9-process-management)
+   - [Network Diagnostics](#10-network-diagnostics)
+   - [Disk and Memory Usage](#11-disk-and-memory-usage)
+4. [ Notes ](#notes)
+5. [ Troubleshooting ]( #Troubleshooting )
+6. [ FAQs ]( #FAQs )
+7. [ References ](#References)
 
 ---
 
@@ -12,100 +40,160 @@ This document provides a comprehensive list of essential Linux commands that are
 
 ---
 
-## Purposes
+## Scope
 
-This documentation serves as a quick reference and onboarding guide for team members and beginners. It outlines the purpose, usage, and syntax of common Linux commands used in practical scenarios such as:
+This SOP covers frequently used commands related to:
 
 - Navigating the file system
-- Managing files and directories
-- Monitoring system performance
-- Controlling permissions and access
-- Managing packages and dependencies
-
----
-
-## Key Features
-
-- Covers all foundational Linux command categories
-- Clear and structured tabular format for readability
-- Ideal for developers, admins, and DevOps professionals
-- Encourages best practices in command-line usage
-- Enhances troubleshooting and monitoring capabilities
+- File and directory management
+- Viewing and editing file contents
+- User and permission management
+- Process monitoring
+- Network diagnostics
 
 ---
 
 ## Getting Started
 
-### Pre-requisites
+## Commands with Description and Examples
 
-| License Type               | Description                                    | Commercial Use | Open Source |
-|----------------------------|------------------------------------------------|----------------|-------------|
-| GNU General Public License v3.0 | Free and open for public use and modification | Yes            | Yes         |
 
----
+### 1. **System Commands**
 
-## Software Overview
-
-| Software       | Version    |
-|----------------|------------|
-| Linux Terminal | Built-in   |
-
----
-
-## System Requirement
-
-| Requirement             | Minimum Recommendation    |
-|--------------------------|---------------------------|
-| Processor/Instance Type  | Dual-Core / T2.micro       |
-| RAM                      | 1 GB or Higher             |
-| ROM (Disk Space)         | 5 GB or Higher             |
-| OS Required              | Ubuntu / CentOS (Stable)   |
+| Command           | Description                                | Example                  |
+|-------------------|--------------------------------------------|--------------------------|
+| `uname -a`        | Show system information                    | `uname -a`               |
+| `df -h`           | Display disk space usage                   | `df -h`                  |
+| `du -sh <dir>`    | Show size of a directory                   | `du -sh /home/tina`      |
+| `free -h`         | Display memory usage                       | `free -h`                |
+| `uptime`          | Show how long the system has been running | `uptime`                 |
+| `hostname`        | Show or set the system hostname            | `hostname`               |
+| `lsb_release -a`  | Display details about Ubuntu version       |  `lsb_release -a`        |
+| `who`             | Show who is logged in                      | `who`                    |
 
 ---
 
-## Important Ports
+### 2. **Package Management**
 
-| Port | Description                                  |
-|------|----------------------------------------------|
-| 22   | SSH remote terminal access (default port)    |
-
----
-
-## Dependencies
-
-### Run-time Dependency
-
-| Dependency | Version | Description                         |
-|------------|---------|-------------------------------------|
-| bash       | 4.x+    | Command interpreter for shell usage |
-
-### Other Dependency
-
-| Dependency  | Version | Description                                           |
-|-------------|---------|-------------------------------------------------------|
-| coreutils   | latest  | Collection of essential commands like `ls`, `cp`, etc |
+| Command                    | Description                            | Example                         |
+|----------------------------|----------------------------------------|---------------------------------|
+| `apt update`              | Update package list                    | `sudo apt update`              |
+| `apt upgrade`             | Upgrade installed packages             | `sudo apt upgrade`             |
+| `apt install <pkg>`       | Install a new package                  | `sudo apt install curl`        |
+| `apt remove <pkg>`        | Remove a package                       | `sudo apt remove nginx`        |
+| `apt search <pkg>`        | Search for a package                   | `apt search htop`              |
 
 ---
 
-## How to Setup/Install Linux Command Utilities
+### 3. **System Shutdown and Reboot**
 
-Most common commands come pre-installed in all major Linux distros. If not, install `coreutils`:
+| Command           | Description                          | Example             |
+|-------------------|--------------------------------------|---------------------|
+| `shutdown now`    | Shutdown the system immediately      | `sudo shutdown now` |
+| `shutdown -r now` | Reboot the system immediately        | `sudo shutdown -r now` |
+| `reboot`          | Reboot the system                    | `sudo reboot`       |
+| `halt`            | Halt the system                      | `sudo halt`         |
 
-```bash
-# Debian/Ubuntu
-sudo apt update
-sudo apt install coreutils
+---
 
-# CentOS/RHEL
-sudo yum install coreutils
 
-## High Availability
+### 4. **Navigation Commands**
 
-To ensure minimal downtime for automated tasks or processes:
+| Command       | Description                             | Example             |
+|---------------|-----------------------------------------|---------------------|
+|`pwd`          | Print current working directory         | `pwd`               |
+| `ls -l`       | List files in long format               | `ls -l /home/user`  |
+| `cd`          | Change directory                        | `cd /var/log`       |
 
-* Use `cron` for job scheduling
-* Implement monitoring with tools like `monit` or `systemd` units for custom scripts
-* Keep a list of critical scripts and commands well-documented and version-controlled
+---
+
+### 5. **File & Directory Operations**
+
+| Command                  | Description                            | Example                         |
+|--------------------------|----------------------------------------|---------------------------------|
+| `touch`                  | Create a new empty file                | `touch myfile.txt`             |
+| `mkdir`                  | Create a new directory                 | `mkdir newdir`                 |
+| `cp`                     | Copy files or directories              | `cp file1.txt backup/`         |
+| `mv`                     | Move or rename files/directories       | `mv oldname.txt newname.txt`   |
+| `rm`                     | Remove a file                          | `rm temp.txt`                  |
+| `rm -r`                  | Remove a directory and its contents    | `rm -r old_backup`             |
+
+---
+
+### 6. **File Content Viewing**
+
+| Command        | Description                          | Example                 |
+|----------------|--------------------------------------|-------------------------|
+| `cat`          | Show contents of a file              | `cat notes.txt`         |
+| `less`         | View large files with scrolling      | `less /var/log/syslog`  |
+| `head`         | View first 10 lines of a file        | `head data.csv`         |
+| `tail`         | View last 10 lines of a file         | `tail data.csv`         |
+| `tail -f`      | Live monitor growing log files       | `tail -f access.log`    |
+
+---
+
+### 7. **User Management**
+
+| Command             | Description                          | Example                |
+|---------------------|--------------------------------------|------------------------|
+| `whoami`            | Show current logged-in user          | `whoami`               |
+| `id`                | Show user and group ID               | `id`                   |
+| `adduser`           | Create a new user                    | `sudo adduser tina`    |
+| `passwd`            | Change user password                 | `passwd tina`          |
+| `su`                | Switch to another user               | `su - root`            |
+
+---
+
+### 8. **Permissions Management**
+
+| Command                 | Description                            | Example                        |
+|-------------------------|----------------------------------------|--------------------------------|
+| `chmod`                 | Change file permissions                | `chmod 755 script.sh`         |
+| `chown`                 | Change file ownership                  | `chown tina:admin file.txt`   |
+| `umask`                 | Show default permission settings       | `umask`                       |
+
+---
+
+### 9. **Process Management**
+
+| Command     | Description                            | Example          |
+|-------------|----------------------------------------|------------------|
+| `ps aux`    | View all running processes             | `ps aux`         |
+| `top`       | Live view of system processes          | `top`            |
+| `kill`      | Terminate a process by PID             | `kill 1234`      |
+| `htop`      | Interactive process monitor (if installed) | `htop`       |
+
+---
+
+### 10. **Network Diagnostics**
+
+| Command       | Description                                 | Example                    |
+|---------------|---------------------------------------------|----------------------------|
+| `ping`        | Check connectivity to a host                | `ping google.com`         |
+| `ifconfig`    | Show network interfaces                     | `ifconfig`                |
+| `ip a`        | Show detailed IP information                | `ip a`                    |
+| `netstat -tuln` | List listening ports and services         | `netstat -tuln`           |
+| `curl`        | Fetch content from a URL                    | `curl http://example.com` |
+
+---
+
+### 11. **Disk and Memory Usage**
+
+| Command         | Description                              | Example              |
+|-----------------|------------------------------------------|----------------------|
+| `df -h`         | Disk usage of all file systems           | `df -h`              |
+| `du -sh *`      | Disk usage of files/folders in dir       | `du -sh *`           |
+| `free -h`       | Show memory usage                        | `free -h`            |
+| `top`           | Real-time memory and process monitor     | `top`                |
+| `vmstat`        | Report memory, CPU, and I/O stats        | `vmstat`             |
+
+---
+
+## Notes
+
+- Use `man <command>` for manual and options.
+- Use `--help` with any command to see usage: `ls --help`
+- Always use caution with destructive commands like `rm`, especially with `sudo`.
 
 ---
 
@@ -116,6 +204,7 @@ To ensure minimal downtime for automated tasks or processes:
 | Command not found | Install the required package or check PATH |
 | Permission denied | Use `sudo` or check file permissions       |
 | File not found    | Verify the path or filename is correct     |
+
 
 ---
 
@@ -147,5 +236,10 @@ No, basic commands work offline. Internet is only needed for package installatio
 | [https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html](https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/index.html) | Linux command documentation     |
 | [https://man7.org/linux/man-pages/](https://man7.org/linux/man-pages/)                                                       | Manual pages for Linux commands |
 | [https://www.geeksforgeeks.org/linux-commands/](https://www.geeksforgeeks.org/linux-commands/)                               | Tutorials and examples          |
+
+
+
+
+
 
 
