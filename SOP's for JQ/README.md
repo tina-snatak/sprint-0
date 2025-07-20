@@ -150,7 +150,8 @@ jq '.user.address.city' data.json
 jq '.items[] | .name' data.json
 ```
 
-<img width="723" height="104" alt="image" src="https://github.com/user-attachments/assets/c1fab1a4-7d1f-4743-ae60-378af885961e" />
+<img width="818" height="108" alt="image" src="https://github.com/user-attachments/assets/4f6827f0-63c4-4af4-b0c0-ee55afd39a51" />
+
 
 
 - ### Search by Index Value
