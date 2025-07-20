@@ -197,6 +197,7 @@ jq '.' data.json
 
 
 *Cause:* File data.json doesn't exist in the current directory. 
+
 *Fix:* Ensure the file is present and the path is correct.
 
 ---
@@ -210,6 +211,7 @@ cat broken.json | jq '.'
 
 
 *Cause:* The JSON file is not properly formatted (e.g., missing commas, brackets, quotes).  
+
 *Fix:* Validate the JSON using a linter or online JSON validator before using jq.
 
 ---
@@ -222,7 +224,8 @@ jq '.user.phone' data.json
 > null
 
 
-*Cause:* The queried field does not exist in the JSON.  
+*Cause:* The queried field does not exist in the JSON. 
+
 *Fix:* Double-check the field name and structure. Use jq 'keys' or jq '.' to inspect structure first.
 
 ---
@@ -235,7 +238,8 @@ jq '.user.roles[5]' data.json
 > null
 
 
-*Cause:* You're accessing an index that doesn’t exist in the array.  
+*Cause:* You're accessing an index that doesn’t exist in the array. 
+
 *Fix:* Use jq '.user.roles | length' to verify array size before indexing.
 
 ---
@@ -248,7 +252,8 @@ jq '.' /root/data.json
 > jq: error: Could not open file /root/data.json: Permission denied
 
 
-*Cause:* File is not readable by the current user.  
+*Cause:* File is not readable by the current user.
+
 *Fix:* Run with elevated permissions (e.g., sudo) or change file permissions.
 
 ---
