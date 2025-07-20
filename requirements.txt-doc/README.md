@@ -25,7 +25,7 @@
 9. [Poetry Overview](#poetry-overview)
 10. [Conclusion](#conclusion)
 11. [FAQs](#faqs)
-13. [Contacts](#contacts)
+13. [Contact Information](#contact-information)
 14. [References](#references)
 
 ---
@@ -212,6 +212,12 @@ poetry shell                  # Enter venv
 ```bash
 poetry export -f requirements.txt --output requirements.txt --without-hashes
 ```
+
+---
+
+## Conclusion
+
+The requirements.txt file is more than just a list of packages—it's a tool that fosters collaboration, reduces bugs, and increases deployment reliability. By following best practices, teams can maintain cleaner, safer, and more efficient Python environments.
 
 ---
 
