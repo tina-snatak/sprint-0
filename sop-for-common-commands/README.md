@@ -53,8 +53,6 @@ This SOP covers frequently used commands related to:
 
 ---
 
-## Getting Started
-
 ## Commands with Description and Examples
 
 
