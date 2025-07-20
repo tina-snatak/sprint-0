@@ -1,15 +1,14 @@
 # SOP for JQ – JSON Query Processor
 
-<img width="1400" height="545" alt="image" src="https://github.com/user-attachments/assets/3fdcf4de-19ba-45ef-81ae-940844528a6e" />
+<img width="828" height="431" alt="image" src="https://github.com/user-attachments/assets/b9e9d745-af06-4405-8b59-01c968130a4f" />
 
 ---
 
-### Author
+### Author Information
 
-| Created     | Version | Author        | Modifed | Comment           | Reviewer         |
-|-------------|---------|---------------|-------|------------|------------------|
-| 19-07-2025  |  V1     | Sneha Joshi   | 19-07-2025 | Internal Review   | Siddharth Pawar  |
-
+| Created by      | Created on     | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer   |    L2 Reviewer                 |
+|-----------------|----------------|------------------|-------------------|--------------------|-----------------|---------------|--------------------------------|
+| Tina Bhatnagar  |  18-07-2025    | V 1.0            |     18-07-2025    |  Rohit Chopra      | Akshit/Nitik    |  Taran        |  Abhishek dubey/ Rishabh sharma|
 ---
 
 ### Table of Contents
