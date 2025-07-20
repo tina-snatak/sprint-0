@@ -163,7 +163,8 @@ jq '.items[] | .name' data.json
 jq '.user.roles[0]' data.json
 ```
 
-<img width="723" height="80" alt="image" src="https://github.com/user-attachments/assets/877c1cd1-1f09-47d9-ae0d-443a2446b1c3" />
+<img width="771" height="72" alt="image" src="https://github.com/user-attachments/assets/6edbaada-047c-41d8-abb7-557b1d221675" />
+
 
 
 ---
