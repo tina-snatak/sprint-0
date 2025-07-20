@@ -1,12 +1,14 @@
 # requirements.txt Documentation
 
-<img width="850" height="350" alt="image" src="https://github.com/user-attachments/assets/f8ac0b19-774b-426b-b47b-24f4d1fdbb52" />
+<img width="807" height="297" alt="image" src="https://github.com/user-attachments/assets/55ddbb95-808a-408d-959a-a66e9aa644eb" />
 
-## Author Metadata
 
-| Author      | Created on | Version   | Last updated by | Last edited on |
-| ----------- | ---------- | --------- | --------------- | -------------- |
-| Sneha Joshi | 18-07-25   | version 1 | Sneha Joshi     | 18-07-25       |
+
+## Author Information
+
+| Created by      | Created on     | Version          | Last updated ON   | pre Reviewer       | L0 Reviewer     | L1 Reviewer   |    L2 Reviewer                 |
+|-----------------|----------------|------------------|-------------------|--------------------|-----------------|---------------|--------------------------------|
+| Tina Bhatnagar  |  18-07-2025    | V 1.0            |     18-07-2025    |  Rohit Chopra      | Akshit/Nitik    |  Taran        |  Abhishek dubey/ Rishabh sharma|
 
 ---
 
@@ -21,10 +23,10 @@
 7. [Syntax of requirements.txt](#syntax-of-requirementstxt)
 8. [Difference Between pip with requirements.txt and pip for single module](#difference-between-pip-with-requirementstxt-and-pip-for-single-module)
 9. [Poetry Overview](#poetry-overview)
-10. [FAQs](#faqs)
-11. [Conclusion](#conclusion)
-12. [Contacts](#contacts)
-13. [References](#references)
+10. [Conclusion](#conclusion)
+11. [FAQs](#faqs)
+13. [Contacts](#contacts)
+14. [References](#references)
 
 ---
 
@@ -42,12 +44,12 @@ The requirements.txt file is a plain text file used in Python projects to list a
 
 ## Why Use requirements.txt
 
-| *Reason*                          | *Explanation*                                                                                 |
+| **Reason**                        | **Explanation**                                                                               |
 | --------------------------------- | --------------------------------------------------------------------------------------------- |
-| *Consistency Across Environments* | Ensures everyone uses the same package versions, preventing "it works on my machine" issues.  |
-| *Ease of Setup*                   | Enables quick installation of dependencies using one command: pip install -r requirements.txt |
-| *Reliable Deployments*            | Locks package versions to prevent unexpected behavior from version upgrades.                  |
-| *Simplifies Dependency Tracking*  | Easier to audit, update, and manage all third-party packages in one file.                     |
+|Consistency Across Environments    | Ensures everyone uses the same package versions, preventing "it works on my machine" issues.  |
+| Ease of Setup                     | Enables quick installation of dependencies using one command: pip install -r requirements.txt |
+| Reliable Deployments              | Locks package versions to prevent unexpected behavior from version upgrades.                  |
+| Simplifies Dependency Tracking    | Easier to audit, update, and manage all third-party packages in one file.                     |
 
 ---
 
@@ -86,12 +88,12 @@ pip install -r requirements.txt
 
 ## Use Cases
 
-| *Scenario*                    | **How requirements.txt Helps**                                                           |
+| **Scenario**                  | **How requirements.txt Helps**                                                          |
 | ----------------------------- | ---------------------------------------------------------------------------------------- |
-| *Development*                 | New developers can install all dependencies quickly and reliably.                        |
-| *CI/CD Pipelines*             | Automated systems can replicate the environment consistently for testing and deployment. |
-| *Production*                  | Ensures stable and tested versions are used in live environments.                        |
-| *Debugging & Reproducibility* | Helps recreate specific environments to trace and fix bugs easily.                       |
+| Development                   | New developers can install all dependencies quickly and reliably.                        |
+| CI/CD Pipelines               | Automated systems can replicate the environment consistently for testing and deployment. |
+| Production                    | Ensures stable and tested versions are used in live environments.                        |
+| Debugging & Reproducibility   | Helps recreate specific environments to trace and fix bugs easily.                       |
 
 ---
 
@@ -151,7 +153,7 @@ requests==2.28.1 \
 
 ## Syntax of requirements.txt
 
-| *Syntax*               | *Description*                                        | *Example*                                              |
+| **Syntax**             | **Description**                                      | **Example**                                              |
 | ---------------------- | ---------------------------------------------------- | ------------------------------------------------------ |
 | package                | Installs the latest version of a package             | flask                                                  |
 | package==version       | Installs the exact version                           | requests==2.28.1                                       |
@@ -168,15 +170,15 @@ requests==2.28.1 \
 
 ## Difference Between pip with requirements.txt and pip for single module
 
-| *Aspect*              | **requirements.txt**                                  | **pip Command**                                          |
+| **Aspect**              | **requirements.txt**                                  | **pip Command**                                          |
 | --------------------- | ----------------------------------------------------- | -------------------------------------------------------- |
-| *Purpose*             | Stores a list of dependencies for reuse and sharing   | Installs packages one-by-one or from a requirements file |
-| *Format*              | Plain text file listing packages and versions         | Command-line tool for Python package installation        |
-| *Usage*               | Used with pip install -r requirements.txt             | Used as pip install <package>                            |
-| *Reproducibility*     | Promotes consistent environments across systems       | Manual installs may vary over time                       |
-| *Version Control*     | Can be committed to version control for collaboration | Pip commands are transient (used interactively)          |
-| *Dependency Tracking* | Can include pinned versions, hashes, and comments     | Tracks only what’s installed at that moment              |
-| *Automation*          | Easily integrates with CI/CD tools for automation     | Less structured for automation                           |
+| Purpose               | Stores a list of dependencies for reuse and sharing   | Installs packages one-by-one or from a requirements file |
+| Format                | Plain text file listing packages and versions         | Command-line tool for Python package installation        |
+| Usage                 | Used with pip install -r requirements.txt             | Used as pip install <package>                            |
+| Reproducibility       | Promotes consistent environments across systems       | Manual installs may vary over time                       |
+| Version Control       | Can be committed to version control for collaboration | Pip commands are transient (used interactively)          |
+| Dependency Tracking   | Can include pinned versions, hashes, and comments     | Tracks only what’s installed at that moment              |
+| Automation            | Easily integrates with CI/CD tools for automation     | Less structured for automation                           |
 
 ---
 
@@ -256,17 +258,17 @@ The requirements.txt file is more than just a list of packages—it's a tool tha
 
 ---
 
-## Contacts
+## Contact Information
 
-| Name        | Email Address                                                                   |
-| ----------- | ------------------------------------------------------------------------------- |
-| Sneha Joshi | [sneha.joshi.snaatak@mygurukulam.co](mailto:sneha.joshi.snaatak@mygurukulam.co) |
+| Name           | Email address                                                         |
+| -------------- | --------------------------------------------------------------------- |
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co) |
 
 ---
 
 ## References
 
-| *Title*                                  | *Link*                                                                                                                                     |
+| **Title**                                | **Link**                                                                                                                                     |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Official pip Documentation               | [https://pip.pypa.io/en/stable/reference/requirements-file-format/](https://pip.pypa.io/en/stable/reference/requirements-file-format/)     |
 | Free Code Camp How-To Guide              | [https://www.freecodecamp.org/news/python-requirementstxt-explained/](https://www.freecodecamp.org/news/python-requirementstxt-explained/) |
