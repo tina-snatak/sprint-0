@@ -103,7 +103,7 @@ Save the following content in a file called data.json for practice:
   ]
 }
 ```
-<img width="674" height="428" alt="Screenshot from 2025-07-20 22-46-57" src="https://github.com/user-attachments/assets/3613fbbe-6d8a-4667-a078-f929a9f1f123" />
+<img width="547" height="427" alt="image" src="https://github.com/user-attachments/assets/4d71ca39-f9a6-4cf5-a01f-786446094714" />
 
 ---
 
