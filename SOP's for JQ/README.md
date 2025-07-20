@@ -115,8 +115,7 @@ Save the following content in a file called data.json for practice:
 ```bash
 cat data.json | jq '.'
 ```
-<img width="704" height="553" alt="Screenshot from 2025-07-20 22-52-22" src="https://github.com/user-attachments/assets/368c9930-f8b7-478e-a71f-343f8084d09b" />
-
+<img width="712" height="581" alt="image" src="https://github.com/user-attachments/assets/d1a78a57-1fe1-4fc2-ba5b-f99d7bf63a62" />
 
 
 - ### Filter a Field
