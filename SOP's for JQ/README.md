@@ -125,7 +125,8 @@ cat data.json | jq '.'
 jq '.user.name' data.json
 ```
 
-<img width="704" height="81" alt="image" src="https://github.com/user-attachments/assets/a1c55b86-7aa1-477c-aec2-85587ae176e1" />
+<img width="741" height="82" alt="image" src="https://github.com/user-attachments/assets/7f9ab3c9-5bdf-4eb0-bf91-9ca45b0fadaa" />
+
 
 ---
 
