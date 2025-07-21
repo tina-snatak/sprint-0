@@ -207,8 +207,15 @@ This SOP covers frequently used commands related to:
 |-------------|----------------------------------------|------------------|
 | `ps aux`    | View all running processes             | `ps aux`         |
 | `top`       | Live view of system processes          | `top`            |
-| `kill`      | Terminate a process by PID             | `kill 1234`      |
+| `kill`      | Terminate a process by PID             | `sudo kill -9 2535`  |
 | `htop`      | Interactive process monitor (if installed) | `htop`       |
+
+---
+<img width="1122" height="155" alt="image" src="https://github.com/user-attachments/assets/d4a182fc-701c-43e4-aaa0-a871204ae902" />
+<img width="1092" height="268" alt="image" src="https://github.com/user-attachments/assets/01656805-6321-401e-a87a-67a3503c69e6" />
+<img width="652" height="146" alt="image" src="https://github.com/user-attachments/assets/5309a7e0-d762-4cdc-a34b-a53533b7f1da" />
+<img width="527" height="22" alt="image" src="https://github.com/user-attachments/assets/3939358c-98d3-4491-9b96-2c360c3b17b1" />
+<img width="1518" height="357" alt="image" src="https://github.com/user-attachments/assets/1ba00613-6747-46ee-a7ca-8e5cf031dbb2" />
 
 ---
 
