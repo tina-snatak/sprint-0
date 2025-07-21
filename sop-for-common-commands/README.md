@@ -146,7 +146,7 @@ This SOP covers frequently used commands related to:
 <img width="687" height="191" alt="image" src="https://github.com/user-attachments/assets/5a378ff1-fcc2-4ed8-85d4-e1e6bdf45b9b" />
 <img width="687" height="191" alt="image" src="https://github.com/user-attachments/assets/170b4231-6d31-4abd-87b0-c2e04f14b491" />
 
-
+---
 
 ### 6. **File Content Viewing**
 
@@ -184,7 +184,7 @@ This SOP covers frequently used commands related to:
 <img width="662" height="86" alt="image" src="https://github.com/user-attachments/assets/2fe3bb1d-a3b6-4133-b8d7-27ffdacfd9c3" />
 
 
-
+---
 
 ### 8. **Permissions Management**
 
