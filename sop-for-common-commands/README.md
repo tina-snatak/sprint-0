@@ -1,4 +1,4 @@
-# SOP for Ubuntu Common Commands
+<img width="825" height="131" alt="image" src="https://github.com/user-attachments/assets/0ebeebc4-71f0-435f-b400-0c9c6898c322" /># SOP for Ubuntu Common Commands
 
 This document serves as a detailed reference guide for commonly used Ubuntu commands, structured for quick and easy access.
 
@@ -174,11 +174,17 @@ This SOP covers frequently used commands related to:
 |---------------------|--------------------------------------|------------------------|
 | `whoami`            | Show current logged-in user          | `whoami`               |
 | `id`                | Show user and group ID               | `id`                   |
-| `adduser`           | Create a new user                    | `sudo adduser tina`    |
-| `passwd`            | Change user password                 | `passwd tina`          |
+| `adduser`           | Create a new user                    | `sudo adduser mintibh`    |
+| `passwd`            | Change user password                 | `sudo passwd mintibh`          |
 | `su`                | Switch to another user               | `su - root`            |
 
 ---
+<img width="1397" height="682" alt="image" src="https://github.com/user-attachments/assets/4bde4a5d-4e95-456a-acb0-21b61dc0a816" />
+<img width="825" height="131" alt="image" src="https://github.com/user-attachments/assets/50d6a2c9-206b-4758-8135-17d5b7420717" />
+<img width="662" height="86" alt="image" src="https://github.com/user-attachments/assets/2fe3bb1d-a3b6-4133-b8d7-27ffdacfd9c3" />
+
+
+
 
 ### 8. **Permissions Management**
 
