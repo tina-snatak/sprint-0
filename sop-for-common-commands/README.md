@@ -92,6 +92,8 @@ This SOP covers frequently used commands related to:
 
 <img width="1065" height="421" alt="image" src="https://github.com/user-attachments/assets/aa236ffd-d4e6-4b8f-a50f-667721fe4b78" />
 <img width="927" height="645" alt="image" src="https://github.com/user-attachments/assets/46b94c2d-b5fc-474f-b5fe-5b6102484cee" />
+<img width="802" height="207" alt="image" src="https://github.com/user-attachments/assets/aff56119-83d9-4582-81f6-036a34a0421f" />
+
 
 ---
 
