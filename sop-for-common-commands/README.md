@@ -108,7 +108,12 @@ This SOP covers frequently used commands related to:
 | `halt`            | Halt the system                      | `sudo halt`         |
 
 ---
+<img width="840" height="275" alt="image" src="https://github.com/user-attachments/assets/a7f9710e-7423-4eee-a7d8-f6baa2369e42" />
+<img width="896" height="235" alt="image" src="https://github.com/user-attachments/assets/5c2f2400-95c7-465b-b8c7-97d8b3adb847" />
+<img width="566" height="218" alt="image" src="https://github.com/user-attachments/assets/7ab03118-2ced-4635-ae2e-a750cb369441" />
+<img width="688" height="218" alt="image" src="https://github.com/user-attachments/assets/a07a9770-72a5-40ab-9f7a-69d0377ac7a3" />
 
+---
 
 ### 4. **Navigation Commands**
 
