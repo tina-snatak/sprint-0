@@ -152,14 +152,20 @@ This SOP covers frequently used commands related to:
 
 | Command        | Description                          | Example                 |
 |----------------|--------------------------------------|-------------------------|
-| `cat`          | Show contents of a file              | `cat notes.txt`         |
-| `less`         | View large files with scrolling      | `less /var/log/syslog`  |
-| `head`         | View first 10 lines of a file        | `head data.csv`         |
-| `tail`         | View last 10 lines of a file         | `tail data.csv`         |
-| `tail -f`      | Live monitor growing log files       | `tail -f access.log`    |
+| `cat`          | Show contents of a file              | `cat newfile.txt`       |
+| `less`         | View large files with scrolling      | `less newfile.txt`      |
+| `head`         | View first 10 lines of a file        | `head -5 newfile.txt`   |
+| `tail`         | View last 10 lines of a file         | `tail -5 newfile.txt`   |
+| `tail -f`      | Live monitor growing log files       | `tail -f newfile.txt`   |
 
 ---
+<img width="1120" height="352" alt="image" src="https://github.com/user-attachments/assets/ff7fc0b9-3c0e-439c-b74f-dd19fb91382f" />
+<img width="750" height="718" alt="image" src="https://github.com/user-attachments/assets/e2b74b1a-f9f7-4d49-b4df-b4867fb62547" />
+<img width="1285" height="187" alt="image" src="https://github.com/user-attachments/assets/e294d1c6-f965-4d83-a01e-f5ee745a03ef" />
+<img width="765" height="187" alt="image" src="https://github.com/user-attachments/assets/a15487b5-30e3-48b6-8d18-6b807306ce8b" />
+<img width="837" height="322" alt="image" src="https://github.com/user-attachments/assets/b9fbce3f-35d1-4c43-98da-cffec638434c" />
 
+---
 
 ### 7. **User Management**
 
