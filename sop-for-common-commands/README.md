@@ -230,6 +230,15 @@ This SOP covers frequently used commands related to:
 | `curl`        | Fetch content from a URL                    | `curl http://example.com` |
 
 ---
+<img width="1107" height="82" alt="image" src="https://github.com/user-attachments/assets/7c2651dc-717e-4eb9-88aa-72a116dbfc28" />
+<img width="1021" height="41" alt="image" src="https://github.com/user-attachments/assets/3b5c2534-c561-4675-b0c5-0337737334a0" />
+<img width="881" height="417" alt="image" src="https://github.com/user-attachments/assets/e29f692a-56c8-4adf-8665-c1922f1163ac" />
+<img width="1141" height="297" alt="image" src="https://github.com/user-attachments/assets/5484aefb-cec8-4504-aa5f-a8f8aab92e0c" />
+<img width="903" height="446" alt="image" src="https://github.com/user-attachments/assets/a9137385-dcb9-4426-a1f3-133c4652a0da" />
+<img width="822" height="136" alt="image" src="https://github.com/user-attachments/assets/c4c435c0-8687-4b0d-82c7-8a94238a4cae" />
+<img width="582" height="315" alt="image" src="https://github.com/user-attachments/assets/aa247471-f128-443d-9634-18a8a567c983" />
+
+---
 
 ### 11. **Disk and Memory Usage**
 
