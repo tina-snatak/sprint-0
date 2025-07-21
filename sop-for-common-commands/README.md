@@ -135,12 +135,18 @@ This SOP covers frequently used commands related to:
 |--------------------------|----------------------------------------|---------------------------------|
 | `touch`                  | Create a new empty file                | `touch myfile.txt`             |
 | `mkdir`                  | Create a new directory                 | `mkdir newdir`                 |
-| `cp`                     | Copy files or directories              | `cp file1.txt backup/`         |
-| `mv`                     | Move or rename files/directories       | `mv oldname.txt newname.txt`   |
-| `rm`                     | Remove a file                          | `rm temp.txt`                  |
-| `rm -r`                  | Remove a directory and its contents    | `rm -r old_backup`             |
+| `cp`                     | Copy files or directories              | `cp cp myfile.txt /tmp/`       |
+| `mv`                     | Move or rename files/directories       | ` mv myfile.txt newdir`        |
+| `rm`                     | Remove a file                          | `rm myfile.txt`                |
+| `rm -r`                  | Remove a directory and its contents    | `rm -r newdir`                 |
 
 ---
+
+<img width="905" height="603" alt="image" src="https://github.com/user-attachments/assets/ee951b49-5aec-4fac-9ab0-8a2394b0cb28" />
+<img width="687" height="191" alt="image" src="https://github.com/user-attachments/assets/5a378ff1-fcc2-4ed8-85d4-e1e6bdf45b9b" />
+<img width="687" height="191" alt="image" src="https://github.com/user-attachments/assets/170b4231-6d31-4abd-87b0-c2e04f14b491" />
+
+
 
 ### 6. **File Content Viewing**
 
