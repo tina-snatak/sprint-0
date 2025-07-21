@@ -49,11 +49,8 @@ The CD workflow typically includes:
 ---
 
 ##  CD Workflow Diagram
-<p align="center">
-  <img width="800" height="600" alt="ansible-cd-workflow-colorful" src="https://github.com/user-attachments/assets/86d18a2e-ff23-4a47-85b1-71a40e79206b" />
 
-</p>
-
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/86542837-64ac-4f85-a77b-80fea32b4d1f" />
 
 ---
 
@@ -179,11 +176,12 @@ A well-defined CD workflow for Ansible roles ensures efficient and reliable depl
 
 ---
 
-##  Contacts
+## Contact Information
 
-| Name        | Email                                                     |
-| ----------- | --------------------------------------------------------- |
-| Sneha Joshi | [sneha.joshi.snaatak@mygurukulam.co](mailto:sneha.joshi.snaatak@mygurukulam.co) |
+| Name           | Email address                                                         |
+| -------------- | --------------------------------------------------------------------- |
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co) |
+
 
 ---
 
