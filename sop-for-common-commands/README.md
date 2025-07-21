@@ -1,4 +1,4 @@
-<img width="825" height="131" alt="image" src="https://github.com/user-attachments/assets/0ebeebc4-71f0-435f-b400-0c9c6898c322" /># SOP for Ubuntu Common Commands
+# SOP for Ubuntu Common Commands
 
 This document serves as a detailed reference guide for commonly used Ubuntu commands, structured for quick and easy access.
 
@@ -188,11 +188,16 @@ This SOP covers frequently used commands related to:
 
 ### 8. **Permissions Management**
 
-| Command                 | Description                            | Example                        |
-|-------------------------|----------------------------------------|--------------------------------|
-| `chmod`                 | Change file permissions                | `chmod 755 script.sh`         |
-| `chown`                 | Change file ownership                  | `chown tina:admin file.txt`   |
-| `umask`                 | Show default permission settings       | `umask`                       |
+| Command                 | Description                            | Example                                         |
+|-------------------------|----------------------------------------|------------------------------------------------ |
+| `chmod`                 | Change file permissions                | `chmod 755 newfile.txt`                         |
+| `chown`                 | Change file ownership                  | `sudo chown tina-bhatnagar:admin newfile.txt`   |
+| `umask`                 | Show default permission settings       | `umask`                                         |
+
+---
+<img width="872" height="140" alt="image" src="https://github.com/user-attachments/assets/6f66b90b-b752-4479-be35-d716912fb712" />
+<img width="1177" height="162" alt="image" src="https://github.com/user-attachments/assets/8e33a759-05e5-4e57-b9d7-09db88569539" />
+<img width="472" height="81" alt="image" src="https://github.com/user-attachments/assets/0d6a9b39-1a83-41ba-872a-1b10c4f2dadc" />
 
 ---
 
