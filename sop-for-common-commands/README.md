@@ -160,6 +160,7 @@ This SOP covers frequently used commands related to:
 
 ---
 <img width="1120" height="352" alt="image" src="https://github.com/user-attachments/assets/ff7fc0b9-3c0e-439c-b74f-dd19fb91382f" />
+<img width="730" height="66" alt="image" src="https://github.com/user-attachments/assets/adcc85ca-e31b-4b6f-88d4-c44fbcef5106" />
 <img width="750" height="718" alt="image" src="https://github.com/user-attachments/assets/e2b74b1a-f9f7-4d49-b4df-b4867fb62547" />
 <img width="1285" height="187" alt="image" src="https://github.com/user-attachments/assets/e294d1c6-f965-4d83-a01e-f5ee745a03ef" />
 <img width="765" height="187" alt="image" src="https://github.com/user-attachments/assets/a15487b5-30e3-48b6-8d18-6b807306ce8b" />
