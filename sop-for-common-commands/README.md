@@ -120,8 +120,12 @@ This SOP covers frequently used commands related to:
 | Command       | Description                             | Example             |
 |---------------|-----------------------------------------|---------------------|
 |`pwd`          | Print current working directory         | `pwd`               |
-| `ls -l`       | List files in long format               | `ls -l /home/user`  |
-| `cd`          | Change directory                        | `cd /var/log`       |
+| `ls -l`       | List files in long format               | `ls -l           `  |
+| `cd`          | Change directory                        | `cd `               |
+
+---
+
+<img width="1018" height="228" alt="image" src="https://github.com/user-attachments/assets/9a7e84e9-5c4e-4374-9476-d3eb31ea8335" />
 
 ---
 
