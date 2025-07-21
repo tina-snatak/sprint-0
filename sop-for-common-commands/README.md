@@ -247,18 +247,32 @@ This SOP covers frequently used commands related to:
 | `df -h`         | Disk usage of all file systems           | `df -h`              |
 | `du -sh *`      | Disk usage of files/folders in dir       | `du -sh *`           |
 | `free -h`       | Show memory usage                        | `free -h`            |
-| `top`           | Real-time memory and process monitor     | `top`                |
 | `vmstat`        | Report memory, CPU, and I/O stats        | `vmstat`             |
+
+---
+<img width="947" height="466" alt="image" src="https://github.com/user-attachments/assets/a67d140d-fd89-4238-bb2e-065b1e221e5f" />
 
 ---
 
 ## Notes
 
 - Use `man <command>` for manual and options.
-- Use `--help` with any command to see usage: `ls --help`
-- Always use caution with destructive commands like `rm`, especially with `sudo`.
 
 ---
+  <img width="466" height="52" alt="image" src="https://github.com/user-attachments/assets/6c632b89-d427-489a-aaf7-d64fd651a964" />
+ <img width="1747" height="567" alt="image" src="https://github.com/user-attachments/assets/4e1a6a8b-9103-4098-8692-adec80bebd6d" />
+
+---
+- Use `--help` with any command to see usage: `ls --help`
+
+---
+<img width="857" height="222" alt="image" src="https://github.com/user-attachments/assets/cd069aa6-aaf0-4399-b45c-1a20f8410cbb" />
+
+---
+
+- Always use caution with destructive commands like `rm`, especially with `sudo`.
+
+  ---
 
 ## Troubleshooting
 
