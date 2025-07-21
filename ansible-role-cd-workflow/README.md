@@ -50,7 +50,8 @@ The CD workflow typically includes:
 
 ##  CD Workflow Diagram
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/86542837-64ac-4f85-a77b-80fea32b4d1f" />
+<img width="582" height="650" alt="image" src="https://github.com/user-attachments/assets/06bb0143-a785-4ce8-b068-213b732a447e" />
+
 
 ---
 
