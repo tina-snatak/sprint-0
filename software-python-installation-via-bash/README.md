@@ -1,4 +1,4 @@
- <img src="https://raspberry-valley.azurewebsites.net/img/Python-01.jpg" alt="logo" width="1000" height="350">
+ <img src="https://raspberry-valley.azurewebsites.net/img/Python-01.jpg" alt="logo" width="700" height="350">
  
 ## Python Installation Script
  ---
