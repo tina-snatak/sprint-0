@@ -18,9 +18,8 @@
   - [Step 2: Grant Execution Permission](#step-2-grant-execution-permission)
   - [Step 3: Execute the Script](#step-3-execute-the-script)
 - [Conclusion](#conclusion)
-- [Contact](#contact)
-- [Reference](#reference)
 -  [Contact Information](#contact-information)
+ - [Reference](#reference)
 ---
 
 ## Introduction
@@ -194,6 +193,12 @@ python3 --version
 
 ---
 
+- ##  Conclusion
+
+This automated Python installation script simplifies the process of downloading, compiling, and configuring Python on any Linux-based system. Whether you're setting up a new environment or upgrading an existing one, this script ensures a smooth and repeatable experience. With added support for choosing versions, managing dependencies, and updating environment variables, it proves helpful for both developers and system administrators. 
+
+---
+
 - ##  Contact Information
 
 | Name           | Email address                                                         |
@@ -205,4 +210,16 @@ python3 --version
 | Tina Bhatnagar |[tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co) | tina-snatak  |  https://github.com/Snaatak-Apt-Get-Swag/documentation  |
 
 ---
+
+##  Reference
+
+| **Title**                         | **Link**                                                                 |
+|------------------------------|----------------------------------------------------------------------|
+| Official Python Downloads     | [python.org/downloads](https://www.python.org/downloads/)            |
+| Python Source Code Archive    | [python.org/ftp/python](https://www.python.org/ftp/python/)          |
+| Linux Shell Scripting Guide   | [tldp.org Bash Guide](https://tldp.org/LDP/Bash-Beginners-Guide/html/) |
+| Bash Install – Stack Overflow| [stackoverflow.com](https://stackoverflow.com/questions/tagged/bash+install) |
+
+---
+
 
