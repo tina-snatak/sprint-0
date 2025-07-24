@@ -1,12 +1,13 @@
-# Python Installation Script
  <img src="https://raspberry-valley.azurewebsites.net/img/Python-01.jpg" alt="logo" width="1000" height="350">
+ 
+## Python Installation Script
+ ---
 
-## **Author Information**
-| **Created**       | **Version** | **Last Modified** | **Author**        | **Level**            | **Reviewer**  |
-|--------------------|-------------|-------------------|-------------------|------------------------|---------------|
-| 18-04-2025         |    V1       |         | Durgesh Sharma    | Internal review        | Pritam        |
-|  18-04-2025          |   V1         |         | Durgesh Sharma      | L0 Review | Shreya Jaiswal        |
-|  18-04-2025          |          |   18-04-2025      | Durgesh Sharma      | L1 Review | Abhishek V       |
+## Author Information
+
+| **Author**   | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level** | **Reviewer**  |
+|--------------|----------------|-------------|---------------------|--------------------|-----------|---------------|
+| Tina Bhatnagar  | 17-07-25    | v1.0  |  Tina Bhatnagar |18-07-25     | Internal    | Rohit Chopra    |
 
 
 
@@ -19,7 +20,7 @@
 - [Conclusion](#conclusion)
 - [Contact](#contact)
 - [Reference](#reference)
-
+-  [Contact Information](#contact-information)
 ---
 
 ## Introduction
@@ -190,4 +191,18 @@ To check the install python version, run:
 ```bash
 python3 --version
 ```
+
+---
+
+- ##  Contact Information
+
+| Name           | Email address                                                         |
+| -------------- | --------------------------------------------------------------------- |
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co) |
+
+| Name| Email Address      | GitHub | URL |
+|-----|--------------------------|-------------|---------|
+| Tina Bhatnagar |[tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co) | tina-snatak  |  https://github.com/Snaatak-Apt-Get-Swag/documentation  |
+
+---
 
