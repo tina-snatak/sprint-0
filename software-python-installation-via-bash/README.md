@@ -211,7 +211,7 @@ This automated Python installation script simplifies the process of downloading,
 
 ---
 
-##  Reference
+- ##  Reference
 
 | **Title**                         | **Link**                                                                 |
 |------------------------------|----------------------------------------------------------------------|
