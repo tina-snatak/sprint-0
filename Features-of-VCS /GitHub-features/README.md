@@ -2,7 +2,7 @@
 
 ---
 
-## Document Metadata
+##   Author Information
 
 | **Author**   | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level** | **Reviewer**  |
 |--------------|----------------|-------------|---------------------|--------------------|-----------|---------------|
