@@ -4,9 +4,9 @@
 
 ## Document Metadata
 
-| Title                     | Created Date | Author        | Reviewer         | Version | Last Updated |
-|--------------------------|--------------|---------------|------------------|---------|---------------|
-| GitHub Evaluation Report | 28-07-2025   | Sneha Joshii  | Team Lead/Manager | v1.0    | 30-07-2025    |
+| **Author**   | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level** | **Reviewer**  |
+|--------------|----------------|-------------|---------------------|--------------------|-----------|---------------|
+| Tina Bhatnagar  | 28-07-25    | v1.0  |  Tina Bhatnagar |28-07-25     | Internal    | Rohit Chopra    |
 
 ---
 
@@ -201,9 +201,11 @@ The purpose of this evaluation is to determine if GitHub is the right fit for ou
 
 ## 15. Contacts
 
-| Name         | Email Address                                 |
-|--------------|-----------------------------------------------|
-| Sneha Joshi  | sneha.joshi.snaatak@mygurukulam.co            |
+
+
+| Name| Email Address      | GitHub | URL |
+|-----|--------------------------|-------------|---------|
+| Tina Bhatnagar |[tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co) |  tina-snatak  |   https://github.com/tina-snatak/|
 
 ---
 
