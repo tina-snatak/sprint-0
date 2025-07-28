@@ -1,4 +1,4 @@
-<img width="398" height="462" alt="image" src="https://github.com/user-attachments/assets/0b189020-24e9-4277-b981-81be5d628d89" />
+<img width="200" height="300" alt="image" src="https://github.com/user-attachments/assets/0b189020-24e9-4277-b981-81be5d628d89" />
  
 # GitHub Evaluation Documentation
 
