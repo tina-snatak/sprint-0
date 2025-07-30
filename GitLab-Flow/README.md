@@ -60,7 +60,7 @@ This documentation provides a comprehensive overview of GitLab Flow, its benefit
 
 ---
 
-## 5.  Advantages
+## 5. Advantages
 
 GitLab Flow offers several key benefits that improve the software development lifecycle:
 
