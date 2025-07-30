@@ -73,7 +73,7 @@ GitLab Flow offers several key benefits that improve the software development li
 
 ---
 
-## 5. Disadvantages
+## 6. Disadvantages
 
 While GitLab Flow is powerful, it comes with certain challenges:
 
@@ -86,7 +86,7 @@ While GitLab Flow is powerful, it comes with certain challenges:
 
 ---
 
-## 6. Best Practices
+## 7. Best Practices
 
 Follow these best practices to make the most out of GitLab Flow:
 
@@ -99,7 +99,7 @@ Follow these best practices to make the most out of GitLab Flow:
 
 ---
 
-## 7. Conclusion
+## 8. Conclusion
 
 GitLab Flow is best suited for teams that deploy across multiple environments and rely heavily on GitLab.  
 It provides a structured path from issue creation to deployment, enabling better automation and control.  
@@ -107,7 +107,7 @@ However, it's most effective when used strictly within the GitLab ecosystem.
 
 ---
 
-## 8. Contact Information
+## 9. Contact Information
 
 | Name| Email Address      | GitHub | URL |
 |-----|--------------------------|-------------|---------|
@@ -115,7 +115,7 @@ However, it's most effective when used strictly within the GitLab ecosystem.
 
 ---
 
-## 9. References
+## 10. References
 
 | **Source**                 | **URL**                                                       |
 |---------------------------|---------------------------------------------------------------|
