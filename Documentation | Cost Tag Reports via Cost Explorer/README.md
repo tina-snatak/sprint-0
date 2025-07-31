@@ -78,7 +78,8 @@ Cost Tag Reports help to:
 
 ## Workflow Diagram
 
-![WhatsApp Image 2025-07-31 at 15 11 00_bc233023](https://github.com/user-attachments/assets/72d07db9-d611-4b97-a401-6914996be31c)
+![WhatsApp Image 2025-07-31 at 15 11 00_bc233023 1](https://github.com/user-attachments/assets/4a76ef85-c675-4394-ad0a-3b071fb989e4)
+
 
 ---
 
@@ -177,8 +178,10 @@ Tagging AWS resources and using Cost Explorer for cost analysis is a powerful co
 
 ## References
 
-* [AWS Cost Explorer Documentation](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)
-* [Activating User-Defined Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html)
-* [AWS Budgets Documentation](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
-* [AWS Config Tag Compliance](https://docs.aws.amazon.com/config/latest/developerguide/tag-compliance.html)
-* [AWS CLI Cost Explorer](https://docs.aws.amazon.com/cli/latest/reference/ce/index.html)
+| Topic                                     | Description                                                                 | Link |
+|-------------------------------------------|-----------------------------------------------------------------------------|------|
+| AWS Cost Explorer                         | Overview of AWS Cost Explorer for visualizing and managing AWS costs.       | [Link](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html) |
+| User-Defined Cost Allocation Tags         | Guide to creating and activating custom tags for cost tracking.             | [Link](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/custom-tags.html) |
+| AWS Budgets                               | Documentation for setting up budgets to manage AWS costs proactively.       | [Link](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) |
+| AWS Config Tag Compliance                 | Ensuring resource compliance using tags and AWS Config rules.               | [Link](https://docs.aws.amazon.com/config/latest/developerguide/tag-compliance.html) |
+| AWS CLI Cost Explorer                     | CLI reference for querying cost and usage data with Cost Explorer.          | [Link](https://docs.aws.amazon.com/cli/latest/reference/ce/index.html) |
