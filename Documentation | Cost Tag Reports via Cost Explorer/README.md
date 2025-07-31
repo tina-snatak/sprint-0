@@ -167,7 +167,7 @@ Tagging AWS resources and using Cost Explorer for cost analysis is a powerful co
 
 ---
 
-## 9. Contact Information
+##  Contact Information
 
 | Name| Email Address      | GitHub | URL |
 |-----|--------------------------|-------------|---------|
