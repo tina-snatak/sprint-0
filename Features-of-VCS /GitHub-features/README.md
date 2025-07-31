@@ -68,9 +68,6 @@ The purpose of this evaluation is to determine if GitHub is the right fit for ou
 | Cost                  | Free, Team, and Enterprise pricing tiers                  |
 | Ease of Use           | UI, navigation, code review process                       |
 | Integration           | VS Code, Slack, Azure, Jira, Snyk, etc.                   |
-| Community & Support   | GitHub Discussions, open-source reach, learning resources |
-| Security & Compliance | Secret scanning, SAML SSO, Code scanning                  |
-| Performance           | Fast clone/push, scalable runners                         |
 | Scalability           | Support for large projects, monorepos, orgs               |
 
 ---
@@ -96,12 +93,7 @@ The purpose of this evaluation is to determine if GitHub is the right fit for ou
 | Pull Requests & Review         | Inline commenting, reviewers, status checks                               |
 | GitHub Actions (CI/CD)         | Integrated CI/CD with customizable workflows                              |
 | GitHub Projects                | Kanban-style boards for tracking work                                     |
-| GitHub Copilot (AI)            | AI pair programmer for code suggestions                                   |
-| GitHub Discussions             | Forum-style communication on repos                                        |
-| Code Scanning & Secret Detection | Automated code security analysis                                          |
-| Webhooks & API                 | Extensible via REST and GraphQL APIs                                      |
-| Dependabot                     | Auto-updates for dependencies and security patches                        |
-| Pages (Static Hosting)         | Deploy documentation or sites using GitHub Pages                          |
+| Code Scanning & Secret Detection | Automated code security analysis                                        |
 
 ---
 
@@ -113,7 +105,6 @@ The purpose of this evaluation is to determine if GitHub is the right fit for ou
 | Rich integrations and APIs                          | GitHub Actions limits in Free tier                      |
 | Best for open-source collaboration                  | Copilot is paid for team use                            |
 | Built-in CI/CD, project tracking, and security tools| Projects board lacks deep PM features (vs Jira)         |
-| Marketplace with 1000s of apps                      | No native IP whitelisting (only in Enterprise)          |
 
 ---
 
@@ -125,7 +116,6 @@ The purpose of this evaluation is to determine if GitHub is the right fit for ou
 | Built-in CI/CD          | Yes (Actions)      | Yes (Pipelines)   | Yes (GitLab CI)     |
 | Free Tier Users         | Unlimited Public   | 5                 | Unlimited Public    |
 | Plugin Ecosystem        | Extensive          | Limited           | Moderate            |
-| Native Jira Integration | No                 | Yes               | No                  |
 | Marketplace             | GitHub Marketplace | Limited           | Moderate            |
 
 ---
@@ -150,7 +140,6 @@ The purpose of this evaluation is to determine if GitHub is the right fit for ou
 | Authentication         | 2FA, OAuth, SAML SSO (Enterprise)                                     |
 | Access Control         | Repo roles, branch protection, CODEOWNERS                            |
 | Compliance Standards   | GDPR, SOC2, ISO 27001                                                 |
-| Code & Secret Scanning | Built-in via CodeQL and secret detection                             |
 | Dependency Management  | Dependabot for vulnerability management in packages                  |
 
 ---
