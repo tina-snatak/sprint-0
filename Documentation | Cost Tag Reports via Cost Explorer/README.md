@@ -1,5 +1,8 @@
+
+
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/8db9472e-0e5c-4225-bdc8-894676c19fad" />
+
 # Cost Tag Reports via Cost Explorer
-<img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/e02febeb-99d7-4b13-b453-b2bba0fe373d" />
 
 ---
 
