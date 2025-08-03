@@ -16,14 +16,14 @@
 4. [Redis Setup](#4-redis-setup)  
    - [Cloud Setup (AWS EC2)](#cloud-setup-aws-ec2)  
    - [Connect via SSH](#connect-via-ssh)  
-   - [Install Redis](#install-redis)  
-   - [Enable Redis on Boot](#enable-redis-on-boot)  
-   - [Verify Redis Service](#verify-redis-service)  
+   - [Install Redis (Ubuntu)](#install-redis-ubuntu)  
+   - [Enable Redis To Start On Boot](#enable-redis-to-start-on-boot)  
+   - [Verify Redis Service Status](#verify-redis-service-status)  
 5. [Verifying Redis Installation](#5-verifying-redis-installation)  
 6.  [Check Redis Version](#6-check-redis-version)  
-7. [Redis CLI Basics](#6-redis-cli-basics)  
-  - [Example Redis CLI Interaction](#example-redis-cli-interaction)  
-8. [Redis Use Cases in POC](#8-redis-use-cases-in-poc)  
+7. [Redis CLI Basics](#7-redis-cli-basics)  
+    - [Example Redis CLI Interaction](#example-redis-cli-interaction)  
+8. [Redis Use Cases](#8-redis-use-cases)  
 9. [Troubleshooting](#9-troubleshooting)  
 10. [Conclusion](#10-conclusion)  
 11. [Contact Information](#11-contact-information)  
@@ -59,7 +59,7 @@ Redis is a lightweight, in-memory data structure store commonly used for caching
 
 ## 4. Redis Setup 
 
-###  Cloud Setup (Example: AWS EC2)
+###  Cloud Setup (AWS EC2)
 
 - #### Launch a Linux EC2 instance (Ubuntu 24.04 )
 
