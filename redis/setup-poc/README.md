@@ -222,7 +222,7 @@ For long-term maintainability and future production upgrades, ensure that the Re
 | Title                    | Link                                                                 |
 |--------------------------|----------------------------------------------------------------------|
 | Official Redis Docs      | [Visit](https://redis.io/docs/)                                      |
-| Redis CLI Cheatsheet     | [Visit](https://devhints.io/redis)                                   |
+| Redis Tutorial           | https://www.tutorialspoint.com/redis/index.htm                       |
 
 
 
