@@ -20,9 +20,9 @@
    - [Enable Redis on Boot](#enable-redis-on-boot)  
    - [Verify Redis Service](#verify-redis-service)  
 5. [Verifying Redis Installation](#5-verifying-redis-installation)  
-   - [Check Redis Version](#check-redis-version)  
-6. [Redis CLI Basics](#6-redis-cli-basics)  
-7. [Example Redis CLI Interaction](#7-example-redis-cli-interaction)  
+6.  [Check Redis Version](#6-check-redis-version)  
+7. [Redis CLI Basics](#6-redis-cli-basics)  
+  - [Example Redis CLI Interaction](#example-redis-cli-interaction)  
 8. [Redis Use Cases in POC](#8-redis-use-cases-in-poc)  
 9. [Troubleshooting](#9-troubleshooting)  
 10. [Conclusion](#10-conclusion)  
@@ -38,13 +38,13 @@ This documentation outlines how to set up and run **Redis** for Proof of Concept
 
 ---
 
-## 1. Purpose
+## 2. Purpose
 
 Redis is a lightweight, in-memory data structure store commonly used for caching, session management, real-time analytics, message brokering, and high-speed data processing.
 
 ---
 
-## 2. Pre-requisites
+## 3. Pre-requisites
 
 | Requirement                                 | Description                                                                 |
 |---------------------------------------------|-----------------------------------------------------------------------------|
@@ -57,7 +57,7 @@ Redis is a lightweight, in-memory data structure store commonly used for caching
 
 ---
 
-## 3. Redis Setup 
+## 4. Redis Setup 
 
 ###  Cloud Setup (Example: AWS EC2)
 
@@ -112,7 +112,7 @@ Redis is a lightweight, in-memory data structure store commonly used for caching
 
   ---
 
-## 4. Verifying Redis Installation
+## 5. Verifying Redis Installation
 
   After starting Redis, you can verify if it’s running properly by using the `redis-cli` command:
 
@@ -123,7 +123,7 @@ Redis is a lightweight, in-memory data structure store commonly used for caching
 
 ---
 
-## 5. Check Redis Version
+## 6. Check Redis Version
 
 To verify which version of Redis is installed on your system, run the following command:
 
@@ -134,7 +134,7 @@ redis-server --version
 
 ---
   
-## 6. Redis CLI Basics
+## 7. Redis CLI Basics
 
 | Command         | Description                          |
 |-----------------|--------------------------------------|
@@ -178,7 +178,7 @@ redis-server --version
 
    ---
 
-## 7. Redis Use Cases 
+## 8. Redis Use Cases 
 
 | Scenario                      | Usage in POC                          |
 |------------------------------|---------------------------------------|
@@ -190,7 +190,7 @@ redis-server --version
 
 ---
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 | Problem                       | Cause                            | Fix                                                      |
 |------------------------------|----------------------------------|----------------------------------------------------------|
@@ -202,14 +202,14 @@ redis-server --version
 
 ---
 
-## 9. Conclusion
+## 10. Conclusion
 
 Setting up Redis for a Proof of Concept (POC) is straightforward and efficient. Its lightweight and in-memory architecture makes it ideal for rapid development and testing scenarios.
 For long-term maintainability and future production upgrades, ensure that the Redis setup and configurations are well-documented in project tracking tools like Jira.
 
 ---
 
-## 10. Contact Information
+## 11. Contact Information
 
 | Name| Email Address      | GitHub | URL |
 |-----|--------------------------|-------------|---------|
@@ -217,7 +217,7 @@ For long-term maintainability and future production upgrades, ensure that the Re
 
 ---
 
-## 11. References
+## 12. References
 
 | Title                    | Link                                                                 |
 |--------------------------|----------------------------------------------------------------------|
