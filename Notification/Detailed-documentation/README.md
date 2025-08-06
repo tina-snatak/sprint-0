@@ -53,6 +53,15 @@ Notification Microservice is a standalone service that manages the delivery of v
 
 <img width="366" height="427" alt="image" src="https://github.com/user-attachments/assets/40651391-56ff-41c3-b0a1-abd7b4638e34" />
 
+#### Dataflow Diagram Explanation
+
+| Step | Description |
+|------|-------------|
+| 1. Frontend / Any Microservice | A client or microservice triggers the process by sending a REST API request. |
+| 2. REST API Request | The request is received and passed to the Notification Service for processing. |
+| 3. Notification Service | Handles event logic, logs data to Elasticsearch, and prepares the notification. |
+| 4. Elasticsearch & Delivery APIs | Elasticsearch stores logs/search data, and Email/SMS/Push APIs deliver the notification to the end user. |
+
 ---
 
 ## 5. Setup & Installation
