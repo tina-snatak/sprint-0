@@ -2,43 +2,44 @@
 
 ## Author Information
 
-| Created By | Created On | Version | Last Updated By | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
-| ---------- | ---------- | ------- | --------------- | ------------ | ----------- | ----------- | ----------- |
-| Anuj Jain  | 22-07-2025 | V1      | —               | Prashant     | —           | —           | —           |
+| **Author**        | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level**   | **Reviewer**      |
+|-------------------|----------------|-------------|----------------------|--------------------|-------------|-------------------|
+| Tina Bhatnagar     | 31-07-25       | v1.0        | Tina Bhatnagar       | 31-07-25           | Internal    | Rohit Chopra      |
+
 
 ---
 
 ## Table of Contents
-1. [Introduction](#introduction)  
-2. [What is Notification Microservice?](#what-is-notification-microservice)  
-3. [Why Use Notification Microservice?](#why-use-notification-microservice)  
-4. [Workflow Diagram](#workflow-diagram)  
-5. [Setup & Installation](#setup--installation)  
-6. [Environment Variables](#environment-variables)  
-7. [How to Run](#how-to-run)  
-8. [Features](#features)  
-9. [Troubleshooting](#troubleshooting)  
-10. [Advantages](#advantages)  
-11. [Best Practices](#best-practices)  
-12. [Conclusion](#conclusion)  
-13. [Contact Information](#contact-information)  
-14. [References](#references)  
+1. [Introduction](#1-introduction)  
+2. [What is Notification Microservice?](#2-what-is-notification-microservice)  
+3. [Why Use Notification Microservice?](#3-why-use-notification-microservice)  
+4. [Workflow Diagram](#4-workflow-diagram)  
+5. [Setup & Installation](#5-setup--installation)  
+6. [Environment Variables](#6-environment-variables)   
+7. [Features](#7-features)  
+8. [Troubleshooting](#8-troubleshooting)  
+9. [Advantages](#9-advantages)
+10. [Disadvantages](#10-disadvantages)  
+11. [Best Practices](#11-best-practices)  
+12. [Conclusion](#12-conclusion)  
+13. [Contact Information](#13-contact-information)  
+14. [References](#14-references)  
 
 ---
 
-## Introduction
+## 1. Introduction
 
 This document provides comprehensive information about the **Notification Microservice**, which is responsible for delivering system-generated notifications through different channels like **Email**, **SMS**, and **Push Notifications**. The documentation includes setup, environment configuration, running the service, and debugging support.
 
 ---
 
-## What is Notification Microservice?
+## 2. What is Notification Microservice?
 
 Notification Microservice is a standalone service that manages the delivery of various types of notifications (email, SMS, push) to users in an asynchronous, event-driven manner. It stores and retrieves notification logs and templates using **Elasticsearch** for fast search and analytics.
 
 ---
 
-## Why Use Notification Microservice?
+## 3. Why Use Notification Microservice?
 
 * Decouples notification logic from core applications  
 * Enables asynchronous and searchable logging  
@@ -48,29 +49,19 @@ Notification Microservice is a standalone service that manages the delivery of v
 
 ---
 
-## Workflow Diagram
+## 4. Workflow Diagram
 
-```
-Frontend / Any Microservice  
-           ↓  
-     REST API Request  
-           ↓  
- Notification Service  
-           ↓  
-  Elasticsearch (for logging/search)  
-           ↓  
-Email / SMS / Push APIs  
-```
+<img width="366" height="427" alt="image" src="https://github.com/user-attachments/assets/40651391-56ff-41c3-b0a1-abd7b4638e34" />
 
 ---
 
-## Setup & Installation
+## 5. Setup & Installation
 
-For detailed installation steps, prerequisites, and deployment guidelines, refer to the **[Notification Microservice POC Documentation](https://github.com/Snaatak-Cloudops-Crew/documentation/tree/SCRUM-4-meenu/OT-Microservices/Applications/Notification%20-API/POC#readme)**.
+For detailed installation steps, prerequisites, and deployment guidelines, refer to the **[Notification Microservice POC Documentation](https://github.com/Snaatak-Apt-Get-Swag/documentation/blob/scrum-66-sunny/OT-Microservices/Application/Notification/POC/README.md)**.
 
 ---
 
-## Environment Variables
+## 6. Environment Variables
 
 | Variable Name        | Description                                                               |
 | -------------------- | ------------------------------------------------------------------------- |
@@ -84,7 +75,7 @@ For detailed installation steps, prerequisites, and deployment guidelines, refer
 
 ---
 
-## Features
+## 7. Features
 
 | Feature            | Description                                    |
 | ------------------ | ---------------------------------------------- |
@@ -96,19 +87,18 @@ For detailed installation steps, prerequisites, and deployment guidelines, refer
 
 ---
 
-## Troubleshooting
+## 8. Troubleshooting
 
 | Problem                | Solution                                 |
 | ---------------------- | ---------------------------------------- |
 | Email not sent         | Verify SMTP credentials and port         |
 | Logs not stored        | Check Elasticsearch connection and index |
-| Docker container exits | Use `docker logs <container_id>`         |
 | SMS gateway fails      | Check API key and balance                |
 | Firebase not sending   | Validate your Firebase key and project   |
 
 ---
 
-## Advantages
+## 9. Advantages
 
 | Advantage                         | Description                                      |
 | --------------------------------- | ------------------------------------------------ |
@@ -120,35 +110,52 @@ For detailed installation steps, prerequisites, and deployment guidelines, refer
 
 ---
 
-## Best Practices
+## 10. Disadvantages
 
-* Use versioned templates and fallback logic  
-* Secure secrets using vaults or env variables  
-* Index logs in Elasticsearch with timestamps and metadata  
-* Enable retry and alerting for failed notifications  
-* Monitor Elasticsearch index size and query performance  
+| Disadvantage                  | Description                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------- |
+| Dependency on External Services | Relies on Elasticsearch and SMTP; failure in these can halt notifications  |
+| Configuration Overhead         | Requires proper setup of SMTP, Elasticsearch, and configs before use       |
+| Delay in High Load              | Under heavy event load, processing might be delayed                        |
+| Security Risks                  | SMTP credentials and data must be securely stored to avoid misuse          |
+| Maintenance Effort              | Regular updates and monitoring needed for dependencies and worker scripts  |
 
 ---
 
-## Conclusion
+## 11. Best Practices
+
+| Best Practice                                      | Description                                                                 |
+| -------------------------------------------------- | --------------------------------------------------------------------------- |
+| Use versioned templates and fallback logic         | Maintain multiple versions of templates and a fallback in case of failure  |
+| Secure secrets using vaults or env variables       | Store SMTP credentials and API keys securely to prevent unauthorized access |
+| Index logs in Elasticsearch with timestamps & metadata | Add timestamps and metadata to make logs easier to search and analyze      |
+| Enable retry and alerting for failed notifications | Automatically retry failed deliveries and alert administrators             |
+| Monitor Elasticsearch index size & query performance | Regularly track index growth and optimize queries for better performance   |
+
+---
+
+## 12. Conclusion
 
 Notification Microservice simplifies and centralizes the task of sending emails, push notifications, and SMS in a microservice architecture. With **Elasticsearch integration**, it allows searchable logging and analytics, making it powerful for observability and audit tracking.
 
 ---
 
-## Contact Information
+## 13. Contact Information
 
-| **Name**  | **Email Address**                                                         |
-| --------- | ------------------------------------------------------------------------- |
-| Anuj Jain | [anujjain.snaatak@mygurukulam.co](mailto:anujjain.snaatak@mygurukulam.co) |
+
+| Name| Email Address      | GitHub | URL |
+|-----|--------------------------|-------------|---------|
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co)|  tina-snatak  | https://github.com/tina-snatak/ |
 
 ---
 
-## References
+## 14. References
 
-* [Spring Boot Docs](https://spring.io/projects/spring-boot)  
-* [Elasticsearch Docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)  
-* [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)  
-* [Twilio SMS API](https://www.twilio.com/docs/sms)  
+| Name                        | Link                                                                                             |
+| --------------------------- | ------------------------------------------------------------------------------------------------ |
+| Spring Boot Docs            | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                 |
+| Elasticsearch Docs          | [https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) |
+| Firebase Cloud Messaging    | [https://firebase.google.com/docs/cloud-messaging](https://firebase.google.com/docs/cloud-messaging) |
+| Twilio SMS API              | [https://www.twilio.com/docs/sms](https://www.twilio.com/docs/sms)                               |
 
 --- 
