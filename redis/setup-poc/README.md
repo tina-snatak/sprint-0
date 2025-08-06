@@ -1,4 +1,4 @@
-# POC for Redis – Setup and Run the Redis 
+# POC for Redis – Setup & Run the Redis 
 
 ## Author Information
 
@@ -32,7 +32,7 @@
 
 ---
 
-## 1. Introduction
+## 1. Intro
 
 This documentation outlines how to set up and run **Redis** for Proof of Concept (POC) purposes,  on a requested cloud platform (like AWS EC2). 
 
