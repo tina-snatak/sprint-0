@@ -1,5 +1,10 @@
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/870e0fd9-a621-49fd-a9c0-a7ba78503fc5" />
+
+
 # POC for Redis – Setup & Run the Redis 
 
+
+---
 ## Author Information
 
 | Author         | Created on | Version | Last updated by | Last edited on | Level     | Reviewer       |
@@ -11,172 +16,136 @@
 ## Table of Contents
 
 1. [Introduction](#1-introduction)  
-2. [Purpose](#2-purpose)  
+2. [Purpose of the POC](#2-purpose-of-the-poc)  
 3. [Pre-requisites](#3-pre-requisites)  
-4. [Redis Setup](#4-redis-setup)  
-   - [Cloud Setup (AWS EC2)](#cloud-setup-aws-ec2)  
-   - [Connect via SSH](#connect-via-ssh)  
-   - [Install Redis (Ubuntu)](#install-redis-ubuntu)  
-   - [Enable Redis To Start On Boot](#enable-redis-to-start-on-boot)  
-   - [Verify Redis Service Status](#verify-redis-service-status)  
-5. [Verifying Redis Installation](#5-verifying-redis-installation)  
-6.  [Check Redis Version](#6-check-redis-version)  
-7. [Redis CLI Basics](#7-redis-cli-basics)  
-    - [Example Redis CLI Interaction](#example-redis-cli-interaction)  
+4. [Infra Provisioning (Cloud Setup)](#4-infra-provisioning-cloud-setup)  
+5. [Redis Installation](#5-redis-installation)  
+6. [Redis Configuration](#6-redis-configuration)  
+7. [Verification Steps (Ping, Set/Get)](#7-verification-steps-ping-setget)  
 8. [Redis Use Cases](#8-redis-use-cases)  
 9. [Troubleshooting](#9-troubleshooting)  
 10. [Conclusion](#10-conclusion)  
-11. [Contact Information](#11-contact-information)  
-12. [References](#12-references)
-
-
----
-
-## 1. Intro
-
-This documentation outlines how to set up and run **Redis** for Proof of Concept (POC) purposes,  on a requested cloud platform (like AWS EC2). 
+11. [Frequently Asked Questions (FAQs)](#11-frequently-asked-questions-faqs)  
+12. [Contact Information](#12-contact-information)  
+13. [References](#13-references)  
 
 ---
 
-## 2. Purpose
+## 1. Introduction
 
-Redis is a lightweight, in-memory data structure store commonly used for caching, session management, real-time analytics, message brokering, and high-speed data processing.
-
----
-
-## 3. Pre-requisites
-
-| Requirement                                 | Description                                                                 |
-|---------------------------------------------|-----------------------------------------------------------------------------|
-| Redis Basics                                | Basic understanding of Redis key-value operations                          |
-| Terminal Access                             | Access to Linux shell or terminal                                           |
-| SSH Access                                  | Secure SSH access to the cloud virtual machine (e.g., AWS EC2)             |
-| Internet Connectivity                       | Required to download and install Redis and dependencies                    |
-| Admin Privileges                            | Root or sudo access to perform installation and configuration tasks        |
-
+ This documentation outlines how to set up and run **Redis** for Proof of Concept (POC) purposes,  on a requested cloud platform (like AWS EC2). 
 
 ---
 
-## 4. Redis Setup 
-
-###  Cloud Setup (AWS EC2)
-
-- #### Launch a Linux EC2 instance (Ubuntu 24.04 )
-
-   <img width="1447" height="105" alt="image" src="https://github.com/user-attachments/assets/38ed9db4-5599-4c44-81b0-dfcb385997c1" />
----
-
-
-- #### Connect via SSH:
-   ```bash
-   ssh -i ~/.ssh/your-key.pem ubuntu@<your-ec2-public-ip>
-   ```
-   
-   <img width="800" height="848" alt="image" src="https://github.com/user-attachments/assets/fc61c5a1-4732-4479-a79d-d0fde4675309" />
-
-   ---
-
-- #### Install Redis (Ubuntu)
-
-   To install Redis on an Ubuntu-based EC2 instance, run the following command:
-
-   ```bash
-    sudo apt update && sudo apt install redis -y
-   ```
-
-<img width="1073" height="328" alt="image" src="https://github.com/user-attachments/assets/e5dac78c-7d83-4794-90be-63d037c7388a" />
-<img width="1241" height="928" alt="image" src="https://github.com/user-attachments/assets/379d596b-f37c-455f-9ecd-1815e0a3fd18" />
+ ## 2. Purpose of the POC
+To manually deploy and configure a basic Redis server on a cloud VM (e.g., AWS EC2), validate connectivity and operations, and  explore Sentinel for high availability.
 
 ---
 
-- #### Enable Redis to Start on Boot
+ ## 3. Pre-requisites
 
-   After installing Redis, enable and start the Redis service using the following commands:
-
-   ```bash
-     sudo systemctl enable redis-server
-     sudo systemctl start redis-server
-  ```
- <img width="1500" height="133" alt="image" src="https://github.com/user-attachments/assets/27b0dfdc-1db8-44eb-9498-b477c1b1c286" />
-
----
-
- - #### Verify Redis Service Status
-
-    You can verify the status of the Redis service using the following command:
-
-   ```bash
-      sudo systemctl status redis-server
-   ```
-  <img width="1352" height="427" alt="image" src="https://github.com/user-attachments/assets/1df0ab79-70d1-4f47-8810-7923c70be790" />
-
-  ---
-
-## 5. Verifying Redis Installation
-
-  After starting Redis, you can verify if it’s running properly by using the `redis-cli` command:
-
-  ```bash
-   redis-cli ping
- ```
-<img width="573" height="95" alt="image" src="https://github.com/user-attachments/assets/5b12777a-bc16-498c-818b-ccc41ba5964e" />
+| Requirement | Description                                                      |
+|-------------|------------------------------------------------------------------|
+| AWS Account  | Create EC2 instances                                            |
+| OS          | Ubuntu 24.04                                                     |                                        
+| Access     | SSH client (PuTTY/Linux terminal), browser                        |
+| Knowledge   | Basic Linux commands, cloud networking                           |
 
 ---
 
-## 6. Check Redis Version
+ ## 4. Infra Provisioning (Cloud Setup)
+- Launch EC2 Instances:
 
-To verify which version of Redis is installed on your system, run the following command:
+   One for Redis server.
 
+---
+
+- Connect to Instance:
+
+   Use SSH: 
+```bash
+ssh -i your-key.pem ubuntu@<EC2-Public-IP>
+```
+
+---
+
+## 5. Redis-installation
+
+ - Update system
+```bash
+sudo apt update
+```
+- Install Redis 
+
+```bash
+sudo apt install -y redis-server
+```
+
+- Check Version 
 ```bash
 redis-server --version
 ```
-<img width="1193" height="92" alt="image" src="https://github.com/user-attachments/assets/691184e7-076e-481b-a0b3-95fdf63368d8" />
-
----
-  
-## 7. Redis CLI Basics
-
-| Command         | Description                          |
-|-----------------|--------------------------------------|
-| `SET key value` | Stores a key-value pair              |
-| `GET key`       | Retrieves value by key               |
-| `DEL key`       | Deletes a key                        |
-| `EXISTS key`    | Checks if a key exists               |
-| `KEYS *`        | Lists all keys                       |
-| `FLUSHALL`      | Clears all keys (**careful!**)       |
-| `INCR key`      | Increments a numeric value           |
+<img width="700" height="68" alt="image" src="https://github.com/user-attachments/assets/89d4e591-132b-4b1c-9fab-d5c7f469a940" />
 
 
-- #### Example Redis CLI Interaction
+## 6. Redis-configuration
 
- - To start using Redis CLI, run:
+```bash
+sudo nano /etc/redis/redis.conf
+```
+- Key settings to update:
 
-  ```bash
-   redis-cli
-  ```
-<img width="507" height="66" alt="image" src="https://github.com/user-attachments/assets/20d940a2-366a-4133-b1c1-a0fcc48fca7c" />
+```bash
+bind 0.0.0.0
+protected-mode no
+requirepass YourStrongPassword
+appendonly yes
+```
 
 ---
 
-- Try the following commands:
-  
-   ```bash
-   SET name "Tina Bhatnagar"
-    ```
-   ```bash
-   GET name
-    ```
- <img width="573" height="137" alt="image" src="https://github.com/user-attachments/assets/2d51d50a-9cc7-4d0f-a80e-406db523810e" />
+- Restart Redis:
+```bash
+sudo systemctl restart redis
+sudo systemctl status redis-server
+```
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/5bfdb96d-e577-4aa6-bd6c-b38b8cab27f7" />
+
+
+```bash
+sudo systemctl enable redis
+```
+---
+## 7. Verification-steps-ping-setget
+   From the same instance:
+
+```bash
+redis-cli
+```
+---
+```bash
+127.0.0.1:6379> PING
+```
+- output PONG
+<img width="700" height="57" alt="image" src="https://github.com/user-attachments/assets/eacdddf6-3818-452b-afc9-f5ab6e8c6a10" />
+
 
 ---
-- To exit the Redis CLI, type:
+```bash
+127.0.0.1:6379> SET name "Tina Bhatnagar"
+```
+- output OK
+<img width="700" height="93" alt="image" src="https://github.com/user-attachments/assets/b50bb811-3ffc-4e77-babe-4b2b7505f2a9" />
 
-  ```bash
-   exit
-  ```
-   <img width="392" height="63" alt="image" src="https://github.com/user-attachments/assets/6c255630-18d5-4cbc-bb44-44a53bb8e03f" />
 
-   ---
+--- 
+```bash
+127.0.0.1:6379> GET name
+```
+- output "Tina Bhatnagar"
+<img width="700" height="93" alt="image" src="https://github.com/user-attachments/assets/0765a596-7e9f-461a-9a45-f7dc8c4a65b5" />
+
+---
 
 ## 8. Redis Use Cases 
 
@@ -192,24 +161,44 @@ redis-server --version
 
 ## 9. Troubleshooting
 
-| Problem                       | Cause                            | Fix                                                      |
-|------------------------------|----------------------------------|----------------------------------------------------------|
-| `redis-cli` not found        | Not installed properly           | Reinstall using package manager                          |
-| Connection refused           | Redis not running                | `sudo systemctl start redis`                             |
-| Cannot bind to port 6379     | Port already in use              | Change Redis config file or stop conflicting service     |
-| Data not persisting          | Using in-memory only             | Configure RDB or AOF in `redis.conf`                     |
-| Redis not accessible externally | Bound to localhost only       | Edit `bind 0.0.0.0` and `protected-mode` in config       |
+| Issue                         | Cause                        | Resolution                                      |
+|------------------------------|------------------------------|--------------------------------------------------|
+| Cannot connect to Redis      | Port blocked                 | Update SG (Security Group) or `bind` config      |
+| Authentication failure       | Wrong password               | Use `requirepass` value in Redis CLI             |
+| Redis not starting           | Misconfig in `redis.conf`    | Check logs: `/var/log/redis/redis-server.log`    |
+| Sentinel not detecting master| Wrong IP or port in config   | Validate IP, port, and `auth-pass` settings      |
 
 ---
 
 ## 10. Conclusion
-
-Setting up Redis for a Proof of Concept (POC) is straightforward and efficient. Its lightweight and in-memory architecture makes it ideal for rapid development and testing scenarios.
-For long-term maintainability and future production upgrades, ensure that the Redis setup and configurations are well-documented in project tracking tools like Jira.
+This POC shows how Redis can be manually installed and configured on a cloud virtual machine. It covers the basic setup, connectivity checks like ping and get/set operations, and explains how to make Redis secure. Optional high availability using Sentinel is also explored.
 
 ---
 
-## 11. Contact Information
+## 11. Frequently Asked Questions (FAQs)
+
+**1. Redis ka default port kya hota hai?**  
+Redis by default **6379** port pe run hota hai. Agar dusre port pe chalana hai, toh `redis.conf` me `port` value change karo.
+
+**2. Redis ko password ke sath secure kaise karein?**  
+`redis.conf` me `requirepass YourStrongPassword` set karo, fir `redis-cli` me connect hote waqt `AUTH YourStrongPassword` chalana padega.
+
+**3. Redis ko remote machine se kaise access karein?**  
+`bind 0.0.0.0` set karo, `protected-mode no` rakho, aur Security Group me port **6379** allow karo. Dhyan rahe strong password use ho.
+
+**4. Redis me data permanently store kaise hota hai?**  
+AOF (`appendonly yes`) ya RDB snapshot enable karke data disk pe save hota hai. POC me humne AOF enable kiya.
+
+**5. Redis service ko restart karne ka sahi tarika kya hai?**  
+Changes ke baad:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart redis
+sudo systemctl status redis
+```
+---
+
+## 12. Contact Information
 
 | Name| Email Address      | GitHub | URL |
 |-----|--------------------------|-------------|---------|
@@ -217,7 +206,7 @@ For long-term maintainability and future production upgrades, ensure that the Re
 
 ---
 
-## 12. References
+## 13. References
 
 | Title                    | Link                                                                 |
 |--------------------------|----------------------------------------------------------------------|
