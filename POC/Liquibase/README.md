@@ -511,8 +511,7 @@ liquibase update
 
 ---
 
-<details>
-<summary><strong>Troubleshooting: PostgreSQL "permission denied for schema public" (Liquibase)</strong></summary>
+### 8. Troubleshooting: PostgreSQL "permission denied for schema public" (Liquibase)
 
 This error occurs when the PostgreSQL user (e.g. `liquibase_user`) does not have sufficient privileges on the `public` schema to create Liquibase metadata tables like `databasechangelog`.
 
@@ -526,47 +525,43 @@ This error occurs when the PostgreSQL user (e.g. `liquibase_user`) does not have
 sudo -u postgres psql
 ````
 
-<img width="628" height="102" alt="Screenshot from 2025-08-02 17-43-34" src="https://github.com/user-attachments/assets/a06b98e7-9a45-4edf-b9ca-75f3d5a24f57" />
+<img width="700" height="122" alt="image" src="https://github.com/user-attachments/assets/1d1dcc7f-18e0-4120-8bcc-6ee727a80d78" />
 
 
 2. **Grant Permissions to liquibase\_user:**
 
-```sql
+```
 GRANT USAGE ON SCHEMA public TO liquibase_user;
 GRANT CREATE ON SCHEMA public TO liquibase_user;
 ALTER SCHEMA public OWNER TO liquibase_user;
+
 ```
 
-<img width="810" height="180" alt="Screenshot from 2025-08-02 17-43-50" src="https://github.com/user-attachments/assets/67ff9e7e-ffba-40f9-9d20-f6a80b8c3229" />
+<img width="700" height="265" alt="image" src="https://github.com/user-attachments/assets/5220e461-339d-4a09-adde-a8779e6b859a" />
 
 
 3. **Also grant ownership of the database (optional but safe):**
 
-```sql
+```
 ALTER DATABASE liquibase_demo OWNER TO liquibase_user;
 ```
 
-<img width="825" height="67" alt="Screenshot from 2025-08-02 17-44-18" src="https://github.com/user-attachments/assets/3682171c-85d7-45fd-b98b-c5f64b420641" />
+<img width="700" height="66" alt="image" src="https://github.com/user-attachments/assets/d5ac8b8a-6b63-4907-b91c-e2e9a08672c3" />
+
 
 4. **Ensure liquibase\_user is the owner of the schema and has full rights:**
 
-```sql
+```
 \dn+ public
 ```
 
-<img width="1086" height="215" alt="Screenshot from 2025-08-02 17-44-44" src="https://github.com/user-attachments/assets/07d90b01-9328-4259-8d81-114358c175f1" />
-
-
-You should see `Owner: liquibase_user` and privileges should include `Create, Usage`.
+<img width="700" height="228" alt="image" src="https://github.com/user-attachments/assets/4268ad91-2023-4c86-9a32-98196f260bb2" />
 
 5. **Exit PostgreSQL shell:**
 
-```sql
+```
 \q
 ```
-
-<img width="251" height="43" alt="Screenshot from 2025-08-02 17-45-00" src="https://github.com/user-attachments/assets/7cfd7250-2edc-475b-9ebb-1967bbbfb497" />
-
 
 6. **Try again:**
 
@@ -574,10 +569,7 @@ You should see `Owner: liquibase_user` and privileges should include `Create, Us
 liquibase update
 ```
 
-<img width="1071" height="882" alt="Screenshot from 2025-08-02 17-45-18" src="https://github.com/user-attachments/assets/c06f7054-b3d4-43b3-9bcd-0d0fee98840a" />
-
-
-</details>
+<img width="700" height="485" alt="image" src="https://github.com/user-attachments/assets/589e0b67-8640-4bb2-8e44-46f63a499bff" />
 
 ---
 
@@ -590,17 +582,9 @@ sudo -u postgres psql liquibase_demo -c "\dt"
 sudo -u postgres psql liquibase_demo -c "SELECT * FROM DATABASECHANGELOG;"
 ```
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
+<img width="700" height="217" alt="image" src="https://github.com/user-attachments/assets/65873e6d-b701-4f12-a718-c23fb4a1d2ac" />
 
-<img width="1837" height="381" alt="Screenshot from 2025-08-02 17-46-14" src="https://github.com/user-attachments/assets/5c5672b7-8c63-4cdd-833c-1a23e323b959" />
-
----
-
-<img width="988" height="305" alt="Screenshot from 2025-08-02 17-47-00" src="https://github.com/user-attachments/assets/124b1ee1-9e24-4fa8-8e97-d9a22ec443d0" />
-
-
-</details>
+<img width="700" height="331" alt="image" src="https://github.com/user-attachments/assets/e3d13e48-0df4-4a99-b65b-401c74f8904b" />
 
 ---
 
@@ -612,12 +596,7 @@ sudo -u postgres psql liquibase_demo -c "SELECT * FROM DATABASECHANGELOG;"
 liquibase tag v2.0
 ```
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-<img width="1106" height="576" alt="Screenshot from 2025-08-02 17-47-22" src="https://github.com/user-attachments/assets/27ca1b46-0f83-486c-a777-d04e5fa067a6" />
-
-</details>
+<img width="1008" height="485" alt="image" src="https://github.com/user-attachments/assets/fbe65007-0138-4fc4-864c-9877cdb0662c" />
 
 ---
 
@@ -626,8 +605,6 @@ liquibase tag v2.0
 
 | Best Practice           | Explanation                                         |
 | ----------------------- | --------------------------------------------------- |
-| Use rollback statements | Always provide rollback for each changeset          |
-| Use Git                 | Store changelogs under version control              |
 | Add comments            | Add meaningful comments to each changeset           |
 | Use tags                | Tag major releases to manage rollback points easily |
 | Unique IDs              | Use meaningful IDs (e.g. author\:ticketNumber)           |
@@ -638,7 +615,7 @@ liquibase tag v2.0
 
 ---
 
-## 9. Backup and Rollback Strategy
+## 9. Backup  Strategy
 
 Before applying any changes to a live database, it's essential to prepare for failure scenarios. This section explains how to create backups, structure changesets for rollback, and use Liquibase rollback commands safely.
 
@@ -651,129 +628,22 @@ Always take a full database backup before applying changes to ensure recoverabil
 #### For PostgreSQL:
 
 ```bash
-pg_dump -U postgres liquibase_demo > liquibase_demo_backup.sql
+pg_dump -U postgres -h localhost liquibase_demo > liquibase_demo_backup.sql
+
 ````
 
 Replace `liquibase_demo` with your actual database name. Ensure the user has permission to read the database.
 
 ---
 
-<details>
-<summary>Why Backup Is Critical</summary>
+#### Why Backup Is Critical
 
 * Prevents data loss during unintended schema or data changes.
 * Allows restoring to the state before applying Liquibase updates.
 * Essential for production environments and automated pipelines.
-
-</details>
-
+  
 ---
 
-### 9.2 Writing Changesets with Rollback
-
-Each `changeset` should have a corresponding `--rollback` clause.
-
-<details>
-<summary>Click to expand</summary>
-
-#### Example with rollback:
-
-```sql
---changeset divya:1
-CREATE TABLE departments (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100)
-);
---rollback DROP TABLE departments;
-```
-
-#### Example without rollback (not recommended):
-
-```sql
---changeset divya:2
-INSERT INTO departments(name) VALUES ('HR');
-```
-
-Add rollback like this:
-
-```sql
---rollback DELETE FROM departments WHERE name = 'HR';
-```
-
-If rollback is not needed or not possible:
-
-```sql
---rollback empty
-```
-
-</details>
-
----
-
-<details>
-<summary>Rollback Best Practices</summary>
-
-* Use `--rollback` for every DDL/DML change.
-* Use `--rollback empty` when rollback is intentionally skipped.
-* Keep changelog files version-controlled and synced with production.
-* Always tag each successful release using `liquibase tag`.
-
-</details>
-
----
-
-### 9.3 Rollback Commands
-
-<details>
-<summary>Click to expand</summary>
-
-#### Rollback the last 1 changeset:
-
-```bash
-liquibase rollbackCount 1
-```
-
-#### Rollback to a tagged version:
-
-```bash
-liquibase rollback v1.0
-```
-
-#### Rollback to a specific date:
-
-```bash
-liquibase rollbackToDate 2025-08-01
-```
-
-</details>
-
----
-
-<details>
-<summary>When to Use Each Rollback Command</summary>
-
-* `rollbackCount`: Use in development or testing to undo last few changes.
-* `rollback vX.X`: Useful in production where each release is tagged.
-* `rollbackToDate`: Restore the database to its state at a specific point in time.
-
-</details>
-
----
-
-### 9.4 Additional Tips
-
-* Run validation before applying updates:
-
-```bash
-liquibase validate
-```
-
-* Keep regular backups, even with rollback scripts.
-* Test both `update` and `rollback` in a non-production environment.
-* Integrate rollback logic into CI/CD pipelines when possible.
-
-
----
 
 ## 10. Conclusion
 
@@ -781,11 +651,12 @@ This POC demonstrates a complete Liquibase lifecycle on a PostgreSQL database â€
 
 ---
 
-## 11. Contact Information
+## 12. Contact Information
 
-| Name         | Email                                                                             |
-| ------------ | --------------------------------------------------------------------------------- |
-| Divya Mishra | [divya.mishra.snaatak@mygurukulam.co](mailto:divya.mishra.snaatak@mygurukulam.co) |
+| Name| Email Address      | GitHub | URL |
+|-----|--------------------------|-------------|---------|
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co)|  tina-snatak  | https://github.com/tina-snatak/ |
+
 
 ---
 
