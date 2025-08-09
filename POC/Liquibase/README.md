@@ -1,13 +1,14 @@
-<img width="2000" height="224" alt="image" src="https://github.com/user-attachments/assets/90ca768e-b102-47a6-9252-755adcaa5496" />
+<img width="700" height="216" alt="image" src="https://github.com/user-attachments/assets/2c4c4fd5-40a5-46fd-9904-2d3b2cea48c9" />
+
 
 
 # Liquibase POC Documentation
 
 ## Author Information
 
-| Created by   | Created on | Version | Last Updated On | Pre Reviewer    | L0 Reviewer | L1 Reviewer | L2 Reviewer |
-| ------------ | ---------- | ------- | --------------- | --------------- | ----------- | ----------- | ----------- |
-| Divya Mishra | 02-08-2025 | V 1.0   | 02-08-2025      | Sahil/Siddharth |             |             |             |
+| **Author**        | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level**   | **Reviewer**      |
+|-------------------|----------------|-------------|----------------------|--------------------|-------------|-------------------|
+| Tina Bhatnagar     | 31-07-25       | v1.0        | Tina Bhatnagar       | 31-07-25           | Internal    | Rohit Chopra      |
 
 ---
 
@@ -58,6 +59,10 @@ This Liquibase POC demonstrates a structured, Docker-free approach to database c
 
 ---
 
+## 2. Purpose
+
+The purpose of this POC is to demonstrate a controlled and automated approach to managing PostgreSQL schema changes using Liquibase. It ensures version-controlled deployments with rollback capability for safer and consistent database updates.
+
 ## 2. What is Liquibase
 
 Liquibase is an open‑source database schema change management solution that enables you to safely and reliably deliver schema changes from development through production. It uses structured change files—called changelogs—in SQL, XML, YAML, or JSON. 
@@ -82,114 +87,100 @@ These changelogs contain ordered “changesets” that Liquibase tracks in your 
 
 ## 4. Architecture Overview
 
-<img width="862" height="601" alt="Screenshot from 2025-08-02 18-33-21" src="https://github.com/user-attachments/assets/73b6ef10-b4ec-42eb-88d4-ad02ff3f7e38" />
+<img width="600" height="511" alt="image" src="https://github.com/user-attachments/assets/37b3e599-f2df-4d9c-b1b6-a2494abe5f62" />
+
 
 ---
 
 ## 5 Install Liquibase CLI
 
-<details>
-<summary><strong>Linux</strong></summary>
+- ## Install Liquibase on Linux
+  
+  **Official Docs:** [Liquibase Installation on Linux](https://docs.liquibase.com/start/install/liquibase-linux.html)
 
-**Official Docs:** [Liquibase Installation on Linux](https://docs.liquibase.com/installation/linux.html)
+  **Download Liquibase**
 
-**Download Liquibase**
+   ```bash
+   wget https://github.com/liquibase/liquibase/releases/download/v4.27.0/liquibase-4.27.0.tar.gz
+   ```
 
-```bash
-wget https://github.com/liquibase/liquibase/releases/download/v4.27.0/liquibase-4.27.0.tar.gz
-```
+  **Extract and Navigate**
 
-**Extract and Navigate**
+  ```bash
+  tar -xzf liquibase-4.27.0.tar.gz
+  cd liquibase-4.27.0
+  ```
 
-```bash
-tar -xzf liquibase-4.27.0.tar.gz
-cd liquibase-4.27.0
-```
+   **Add Liquibase to PATH (temporary)**
 
-**Add Liquibase to PATH (temporary)**
+   ```bash
+     export PATH=$PATH:$(pwd)
+   ```
 
-```bash
-export PATH=$PATH:$(pwd)
-```
+  **Verify Installation**
 
-**Verify Installation**
+  ```bash
+     liquibase --version
+  ```
 
-```bash
-liquibase --version
-```
+- ## Install Liquibase on macOS
 
-To make the PATH update permanent, add the export line to your `~/.bashrc` or `~/.zshrc`.
+  **Official Docs:** [Liquibase Installation on macOS](https://docs.liquibase.com/start/install/liquibase-macos.html)
 
-</details>
+  **Option 1: Install via Homebrew**
 
-<details>
-<summary><strong>macOS</strong></summary>
+  ```bash
+   brew install liquibase
+   liquibase --version
+  ```
 
-**Official Docs:** [Liquibase Installation on macOS](https://docs.liquibase.com/installation/macos.html)
+  **Option 2: Manual Installation**
 
-**Option 1: Install via Homebrew**
+  ```bash
+   curl -LO https://github.com/liquibase/liquibase/releases/download/v4.27.0/liquibase-4.27.0.tar.gz
+   tar -xzf liquibase-4.27.0.tar.gz
+   cd liquibase-4.27.0
+   export PATH=$PATH:$(pwd)
+   liquibase --version
+  ```
 
-```bash
-brew install liquibase
-liquibase --version
-```
+- ## Install Liquibase on Windows
 
-**Option 2: Manual Installation**
+   **Official Docs:** [Liquibase Installation on Windows](https://docs.liquibase.com/installation/windows.html)
 
-```bash
-curl -LO https://github.com/liquibase/liquibase/releases/download/v4.27.0/liquibase-4.27.0.tar.gz
-tar -xzf liquibase-4.27.0.tar.gz
-cd liquibase-4.27.0
-export PATH=$PATH:$(pwd)
-liquibase --version
-```
+   **Download Liquibase**
 
-To make the PATH update permanent, add the export line to your `.bash_profile` or `.zshrc`.
+    ```powershell
+       Invoke-WebRequest https://github.com/liquibase/liquibase/releases/download/v4.27.0/liquibase-4.27.0.zip -OutFile liquibase.zip
+    ```
 
-</details>
+   **Extract Liquibase**
 
-<details>
-<summary><strong>Windows</strong></summary>
+    ```powershell
+       Expand-Archive .\liquibase.zip -DestinationPath .\liquibase
+       cd .\liquibase
+    ```
 
- **Official Docs:** [Liquibase Installation on Windows](https://docs.liquibase.com/installation/windows.html)
+   **Add to PATH (temporary)**
 
-**Download Liquibase**
+   ```powershell
+      $env:Path += ";$(Resolve-Path .\)"
+   ```
 
-```powershell
-Invoke-WebRequest https://github.com/liquibase/liquibase/releases/download/v4.27.0/liquibase-4.27.0.zip -OutFile liquibase.zip
-```
+   **Verify Installation**
 
-**Extract Liquibase**
+   ```powershell
+       liquibase --version
+   ```
 
-```powershell
-Expand-Archive .\liquibase.zip -DestinationPath .\liquibase
-cd .\liquibase
-```
-
-**Add to PATH (temporary)**
-
-```powershell
-$env:Path += ";$(Resolve-Path .\)"
-```
-
-**Verify Installation**
-
-```powershell
-liquibase --version
-```
-
-To make the path permanent, add the Liquibase folder to your system’s Environment Variables → Path.
-
-</details>
 
 ---
 
 ## 6. Install PostgreSQL Database
 
-<details>
-<summary><strong>Linux</strong></summary>
+- ## Install PostgreSQL on Linux
 
-**Official Docs:** [Install PostgreSQL on Debian/Ubuntu](https://www.postgresql.org/download/linux/ubuntu/)
+**Official Docs:** [Install PostgreSQL on Debian/Ubuntu](https://www.geeksforgeeks.org/postgresql/install-postgresql-on-linux/)
 
 **Update Package Index**
 
@@ -216,12 +207,10 @@ sudo systemctl enable postgresql
 sudo -u postgres psql
 ```
 
-</details>
 
-<details>
-<summary><strong>macOS (Homebrew)</strong></summary>
+- ## Install PostgreSQL on a Mac with Homebrew
 
-**Official Docs:** [Install PostgreSQL on macOS](https://www.postgresql.org/download/macosx/)
+**Official Docs:** [Install PostgreSQL on macOS](https://www.geeksforgeeks.org/postgresql/how-to-install-postgresql-on-a-mac-with-homebrew/)
 
 **Install PostgreSQL via Homebrew**
 
@@ -242,14 +231,11 @@ brew services start postgresql
 psql postgres
 ```
 
-</details>
+- ## Install PostgreSQL on Windows
 
-<details>
-<summary><strong>Windows</strong></summary>
+**Official Docs:** [PostgreSQL Installer for Windows](https://www.geeksforgeeks.org/postgresql/install-postgresql-on-windows/)
 
-**Official Docs:** [PostgreSQL Installer for Windows](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
-
-1. Go to the [official installer page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
+1. Go to the [official installer page](https://www.geeksforgeeks.org/postgresql/install-postgresql-on-windows/).
 2. Download the installer for your Windows version.
 3. Run the installer and follow the wizard:
 
@@ -263,8 +249,6 @@ psql postgres
 ```cmd
 psql -U postgres
 ```
-
-</details>
 
 ---
 
@@ -282,17 +266,9 @@ This guide walks you through how to use Liquibase with PostgreSQL from scratch. 
 sudo apt update
 sudo apt install postgresql postgresql-contrib -y
 ```
+<img width="700" height="146" alt="image" src="https://github.com/user-attachments/assets/a7e4d83c-945e-433c-955b-778c86bbb64d" />
+<img width="700" height="87" alt="image" src="https://github.com/user-attachments/assets/c5a77af6-ab7e-49e5-9543-f014bb6d6da5" />
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-<img width="1086" height="258" alt="Screenshot from 2025-08-02 17-07-14" src="https://github.com/user-attachments/assets/e0a8118e-5072-42ab-a936-1408144dd82e" />
-
----
-
-<img width="1638" height="447" alt="Screenshot from 2025-08-02 17-07-42" src="https://github.com/user-attachments/assets/4b117169-409a-4ccf-a132-4d53b07edbba" />
-
-</details>
 
 **Start and enable the PostgreSQL service:**
 
@@ -300,24 +276,16 @@ sudo apt install postgresql postgresql-contrib -y
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
 ```
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
+<img width="700" height="308" alt="image" src="https://github.com/user-attachments/assets/d884c806-e34d-442b-b7e4-8773ceb6a3a4" />
 
-<img width="1388" height="148" alt="Screenshot from 2025-08-02 17-08-13" src="https://github.com/user-attachments/assets/4878fd1d-ccd3-4ace-bf66-a3fccc9925b4" />
-
-</details>
 
 **Create user and database:**
 
 ```bash
 sudo -u postgres psql
 ```
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
+<img width="700" height="122" alt="image" src="https://github.com/user-attachments/assets/c0ca941f-df53-4d61-a77c-fba0edeb6f9e" />
 
-<img width="567" height="148" alt="Screenshot from 2025-08-02 17-08-44" src="https://github.com/user-attachments/assets/a24d09be-c0b3-47ca-9f1e-fc69191b69a4" />
-
-</details>
 
 Inside the psql prompt:
 
@@ -328,12 +296,14 @@ GRANT ALL PRIVILEGES ON DATABASE liquibase_demo TO liquibase_user;
 \q
 ```
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
+Test the Connection
 
-<img width="846" height="227" alt="Screenshot from 2025-08-02 17-09-06" src="https://github.com/user-attachments/assets/47280968-158f-4be3-a7b3-ebbbb68d1d3a" />
+```
+psql -U liquibase_user -d liquibase_demo -h localhost -W
+```
 
-</details>
+<img width="700" height="421" alt="image" src="https://github.com/user-attachments/assets/2daf7284-25ac-48a2-a5a9-0175512ad580" />
+
 
 ---
 
@@ -345,25 +315,13 @@ GRANT ALL PRIVILEGES ON DATABASE liquibase_demo TO liquibase_user;
 sudo apt install openjdk-11-jdk -y
 ```
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-<img width="1617" height="287" alt="Screenshot from 2025-08-02 17-09-45" src="https://github.com/user-attachments/assets/5502b264-ee48-4e31-9905-2026b8282e5f" />
-
-</details>
-
 **Verify Java installation:**
 
 ```bash
 java -version
 ```
+<img width="700" height="97" alt="image" src="https://github.com/user-attachments/assets/e8366f8e-eccd-4f49-980e-6d3226aee13a" />
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-<img width="1080" height="147" alt="Screenshot from 2025-08-02 17-11-01" src="https://github.com/user-attachments/assets/2b3e802b-83fd-4afc-8344-b1ae4b34d1a4" />
-
-</details>
 
 ---
 
@@ -377,12 +335,8 @@ tar -xzf liquibase-4.27.0.tar.gz
 cd liquibase
 ```
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
+<img width="700" height="623" alt="image" src="https://github.com/user-attachments/assets/70221825-6a72-47d4-a2bd-f1c78e6eb292" />
 
-<img width="1842" height="633" alt="Screenshot from 2025-08-02 17-11-39" src="https://github.com/user-attachments/assets/636d8bfa-184e-4103-8d18-b34726ae4072" />
-
-</details>
 
 
 **Temporarily add Liquibase to PATH:**
@@ -390,23 +344,14 @@ cd liquibase
 ```bash
 export PATH=$PATH:$(pwd)
 ```
+<img width="700" height="26" alt="image" src="https://github.com/user-attachments/assets/904bd0cc-fe12-4a0f-9b4b-bc2bea94a07e" />
 
 **Verify installation:**
 
 ```bash
 liquibase --version
 ```
-
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-
-<img width="1423" height="556" alt="Screenshot from 2025-08-02 17-12-29" src="https://github.com/user-attachments/assets/9de066fa-31e0-4934-b968-0268c7a17f62" />
-
-
-</details>
-
-Refer: [Liquibase Official Docs](https://www.liquibase.org/download)
+<img width="700" height="897" alt="image" src="https://github.com/user-attachments/assets/30ddb373-ff14-45d0-9b85-bf1b24b50efe" />
 
 ---
 
@@ -417,20 +362,14 @@ Refer: [Liquibase Official Docs](https://www.liquibase.org/download)
 ```bash
  https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.3/
 ```
+<img width="700" height="51" alt="image" src="https://github.com/user-attachments/assets/90b651ff-6422-48ce-bf8d-50a2b92f9876" />
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-<img width="951" height="890" alt="Screenshot from 2025-08-02 18-46-08" src="https://github.com/user-attachments/assets/28938e1d-73db-406a-9328-f75531776a24" />
-
-</details>
 
 ---
 
 ### Troubleshooting JDBC Driver Download Issue
 
-<details>
-<summary><strong>Click to expand troubleshooting steps</strong></summary>
+- #### here to see the detailed troubleshooting instructions.
 
 ### 1. Check Network Connectivity
 
