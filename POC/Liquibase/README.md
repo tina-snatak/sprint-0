@@ -388,49 +388,43 @@ If there's no response, the issue may be with your DNS or network connection.
 If `wget` hangs or fails, try using `curl`:
 
 ```bash
-curl -o ~/Downloads/postgresql-42.7.3.jar https://jdbc.postgresql.org/download/postgresql-42.7.3.jar
+   wget https://jdbc.postgresql.org/download/postgresql-42.7.3.jar
 ```
 
 ---
 
-### 3. Download Manually from Browser
+### 3. Check if liquibase exists as a file
 
-If command-line download fails, you can manually download the driver:
+  ```
+   ls -l ~ | grep liquibase
+ ```
+ - #### If the output shows a file named liquibase (not a folder), remove it:
 
-1. Visit: [https://jdbc.postgresql.org/download/]( https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.3/)
-2. Download `postgresql-42.7.3.jar` file.
-3. Move it to your project directory:
+  ```
+    rm ~/liquibase
+  ```
+### 4. Create required directories 
 
-```bash
-mv ~/Downloads/postgresql-42.7.3.jar .
+ ```
+   mkdir -p ~/liquibase/lib
+ ```
+### 5. Move the JAR file to the library folder
+
+```
+  mv postgresql-42.7.3.jar ~/liquibase/lib/
+```
+### 6. Set the classpath
+
+```
+  classpath=/home/ubuntu/liquibase/lib/postgresql-42.7.3.jar
+```
+### 7. Verify the absolute path
+
+```
+  realpath ~/liquibase/lib/postgresql-42.7.3.jar
 ```
 
-```bash
-classpath=/home/divya/liquibase/postgresql-42.7.3.jar
-```
-
-```bash
-realpath postgresql-42.7.3.jar
-```
-
-<img width="966" height="153" alt="Screenshot from 2025-08-02 17-24-04" src="https://github.com/user-attachments/assets/99fb288b-0d71-41b8-b919-32ca457a2b65" />
-
----
-
-### 4. Verify File Exists
-
-Ensure the JAR file was downloaded successfully:
-
-```bash
-ls -lh /home/divya/postgresql-42.7.3.jar
-```
-
-<img width="967" height="102" alt="Screenshot from 2025-08-02 17-26-53" src="https://github.com/user-attachments/assets/a2eef363-dd8e-46aa-8909-eaadf4256cea" />
-
-
-You should see the JAR file listed with its size (\~1.2 MB).
-
-</details>
+<img width="700" height="601" alt="image" src="https://github.com/user-attachments/assets/2354e579-098f-4add-8acd-f40aeb104ddf" />
 
 ---
 
@@ -439,7 +433,7 @@ You should see the JAR file listed with its size (\~1.2 MB).
 **Create configuration file so you don’t pass CLI arguments every time.**
 
 ```bash
-nano liquibase.properties
+vim liquibase.properties
 ```
 
 <img width="605" height="62" alt="Screenshot from 2025-08-02 18-43-41" src="https://github.com/user-attachments/assets/07cf3494-65b1-44c2-a9d8-fe58248c42e3" />
