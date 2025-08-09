@@ -44,9 +44,10 @@
 10. [Backup Strategy](#10-backup--strategy)  
     - [Backup Before Applying Changes](#backup-before-applying-changes)  
     - [Why Backup Is Critical](#why-backup-is-critical)  
-11. [Conclusion](#11-conclusion)  
-12. [Contact Information](#12-contact-information)  
-13. [References](#13-references)  
+11. [Conclusion](#11-conclusion)
+12.  [FAQs](#12-faqs)  
+13. [Contact Information](#13-contact-information)  
+14. [References](#14-references)  
 
 ---
 
@@ -652,7 +653,25 @@ This POC demonstrates a complete Liquibase lifecycle on a PostgreSQL database â€
 
 ---
 
-## 12. Contact Information
+## 12. FAQs
+
+**Q1: Can I use Liquibase with databases other than PostgreSQL?**  
+Yes. Liquibase supports many databases including MySQL, Oracle, SQL Server, and MariaDB. Just make sure you update the JDBC driver and `liquibase.properties` accordingly.  
+
+**Q2: Do I need to install Liquibase separately on every environment?**  
+Not necessarily. You can package Liquibase with your application, but installing it locally per environment makes troubleshooting easier.  
+
+**Q3: How do I roll back a change if something goes wrong?**  
+Use the `liquibase rollback` command with a tag, date, or count of changesets to revert to a previous state. Always take backups before running rollbacks.  
+
+**Q4: Whatâ€™s the difference between a changelog file and a changeset?**  
+A changelog is a collection of changesets. A changeset is an atomic unit of change (like creating a table or altering a column).  
+
+**Q5: Can I run Liquibase commands without the CLI?**  
+Yes. Liquibase integrates with Maven, Gradle, and can run programmatically from Java code.  
+
+
+## 13. Contact Information
 
 | Name| Email Address      | GitHub | URL |
 |-----|--------------------------|-------------|---------|
@@ -661,7 +680,7 @@ This POC demonstrates a complete Liquibase lifecycle on a PostgreSQL database â€
 
 ---
 
-## 13. References
+## 14. References
 
 | Link                                                                              | Description                 |
 | --------------------------------------------------------------------------------- | --------------------------- |
