@@ -449,7 +449,9 @@ classpath=/home/ubuntu/liquibase/lib/postgresql-42.7.3.jar
 
 ```
 
-<img width="700" height="241" alt="image" src="https://github.com/user-attachments/assets/2c2b1d4e-ffce-40f4-8fcb-a44f99f7a783" />
+<img width="700" height="32" alt="image" src="https://github.com/user-attachments/assets/75dfb872-35df-42b9-931e-43d632135481" />
+
+<img width="700" height="178" alt="image" src="https://github.com/user-attachments/assets/d7a8f0c9-30bd-4779-9679-655d89e9b84c" />
 
 ---
 
@@ -505,13 +507,7 @@ SELECT 1;
 liquibase update
 ```
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-<img width="1071" height="882" alt="Screenshot from 2025-08-02 17-45-18" src="https://github.com/user-attachments/assets/0951119e-2b45-4a1a-ad58-683f8bf32521" />
-
-
-</details>
+<img width="700" height="486" alt="image" src="https://github.com/user-attachments/assets/06e31720-a270-436f-b654-29db88add1e2" />
 
 ---
 
