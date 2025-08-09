@@ -402,8 +402,9 @@ If `wget` hangs or fails, try using `curl`:
 
   ```
     rm ~/liquibase
+
   ```
-### 4. Create required directories 
+- #### Create required directories 
 
  ```
    mkdir -p ~/liquibase/lib
@@ -436,28 +437,19 @@ If `wget` hangs or fails, try using `curl`:
 vim liquibase.properties
 ```
 
-<img width="605" height="62" alt="Screenshot from 2025-08-02 18-43-41" src="https://github.com/user-attachments/assets/07cf3494-65b1-44c2-a9d8-fe58248c42e3" />
-
-
 Paste the following content:
 
-```properties
+```
 changeLogFile=changelog.sql
 url=jdbc:postgresql://localhost:5432/liquibase_demo
-username=<Username>    
-password=<password> 
+username=postgres            # Replace with your actual DB username
+password=your_password       # Replace with your actual DB password
 driver=org.postgresql.Driver
-classpath=/home/<usr>/postgresql-42.7.3.jar
+classpath=/home/ubuntu/liquibase/lib/postgresql-42.7.3.jar
+
 ```
 
-Replace `your-username` with your actual username.
-
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-
-<img width="661" height="215" alt="Screenshot from 2025-08-02 17-29-45" src="https://github.com/user-attachments/assets/e81dcf8c-9c59-4dcf-aa40-cd336cd80f60" />
-
-</details>
+<img width="700" height="241" alt="image" src="https://github.com/user-attachments/assets/2c2b1d4e-ffce-40f4-8fcb-a44f99f7a783" />
 
 ---
 
@@ -466,48 +458,42 @@ Replace `your-username` with your actual username.
 **This file describes the database changes (in order).**
 
 ```bash
-nano changelog.sql
+vim changelog.sql
 ```
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
-  
-<img width="781" height="65" alt="Screenshot from 2025-08-02 17-34-08" src="https://github.com/user-attachments/assets/60a4261d-09a0-4808-ab7a-46cb230d679a" />
 
-</details>
 
 Paste the following example:
 
-```sql
---liquibase formatted sql
+```
+-- liquibase formatted sql
 
---changeset divya:1
+-- changeset tina:1
 CREATE TABLE departments (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
 );
---rollback DROP TABLE departments;
+-- rollback DROP TABLE departments;
 
---changeset divya:2
+-- changeset tina:2
 CREATE TABLE employees (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100),
-  department_id INT REFERENCES departments(id)
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    department_id INT REFERENCES departments(id)
 );
---rollback DROP TABLE employees;
+-- rollback DROP TABLE employees;
 
---changeset divya:3
---comment: tagging database as v1.0
---tag: v1.0
+-- changeset tina:3
+-- comment: tagging database as v1.0
+-- tag: v1.0
 SELECT 1;
+
+
 ```
 
-<details>
-<summary><strong>Click to view Screenshot</strong></summary>
+<img width="700" height="33" alt="image" src="https://github.com/user-attachments/assets/56f79113-c2ea-4061-a67a-10bf599360de" />
 
-<img width="650" height="643" alt="Screenshot from 2025-08-02 17-33-49" src="https://github.com/user-attachments/assets/ce7a5e3d-be81-4f20-83c1-a0a102300fd4" />
+<img width="700" height="527" alt="image" src="https://github.com/user-attachments/assets/941324aa-ca27-40bc-bd8f-084dd23972b0" />
 
-
-</details>
 
 ---
 
