@@ -1,8 +1,8 @@
 <img width="700" height="216" alt="image" src="https://github.com/user-attachments/assets/2c4c4fd5-40a5-46fd-9904-2d3b2cea48c9" />
 
 
-
 # Liquibase POC Documentation
+
 
 ## Author Information
 
@@ -12,43 +12,41 @@
 
 ---
 
+
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [What is Liquibase](#2-what-is-liquibase)
-3. [Pre-requisites](#3-pre-requisites)
-4. [Architecture Overview](#4-architecture-overview)
-
-<details>
-<summary><strong>5. Step-by-Step Setup Guide</strong></summary>
-
-* [5.1 Install Liquibase CLI](#51-install-liquibase-cli)
-* [5.2 Install PostgreSQL Database](#52-install-postgresql-database)
-* [5.3 Install Java (JDK)](#53-install-java-jdk-11-or-higher)
-* [5.4 Download PostgreSQL JDBC Driver](#54-download-postgresql-jdbc-driver)
-* [5.5 Create Liquibase Properties File](#55-create-liquibase-properties-file)
-* [5.6 Create SQL Changelog File](#56-create-sql-changelog-file)
-* [5.7 Run Update Command](#57-run-update-command)
-* [5.8 Verify Schema in PostgreSQL](#58-verify-schema-in-postgresql)
-* [5.9 Tag a Version](#59-tag-a-version)
-
-</details>
-
-6. [Best Practices](#6-best-practices)
-
-<details>
-<summary><strong>7. Backup and Rollback Strategy</strong></summary>
-
-* [7.1 Backup Before Applying Changes](#71-backup-before-applying-changes)
-* [7.2 Writing Changesets with Rollback](#72-writing-changesets-with-rollback)
-* [7.3 Rollback Commands](#73-rollback-commands)
-* [7.4 Additional Tips](#74-additional-tips)
-
-</details>
-
-8. [Conclusion](#8-conclusion)
-9. [Contact Information](#9-contact-information)
-10. [References](#10-references)
+1. [Introduction](#1-introduction)  
+2. [Purpose](#2-purpose)  
+3. [What is Liquibase](#3-what-is-liquibase)  
+4. [Pre-requisites](#4-pre-requisites)  
+5. [Architecture Overview](#5-architecture-overview)  
+6. [Install Liquibase CLI](#6-install-liquibase-cli)  
+   - [Install on Linux](#install-liquibase-on-linux)  
+   - [Install on macOS](#install-liquibase-on-macos)  
+   - [Install on Windows](#install-liquibase-on-windows)  
+7. [Install PostgreSQL Database](#7-install-postgresql-database)  
+   - [Install on Linux](#install-postgresql-on-linux)  
+   - [Install on macOS](#install-postgresql-on-a-mac-with-homebrew)  
+   - [Install on Windows](#install-postgresql-on-windows)  
+8. [Step-by-Step Setup Guide](#8-step-by-step-setup-guide)  
+   - [Install PostgreSQL (Linux)](#install-postgresql-linux)  
+   - [Install Java (JDK 11 or higher)](#install-java-jdk-11-or-higher)  
+   - [Install Liquibase CLI](#install-liquibase-cli)  
+   - [Download PostgreSQL JDBC Driver](#download-postgresql-jdbc-driver)  
+   - [Troubleshooting JDBC Driver Download Issue](#troubleshooting-jdbc-driver-download-issue)  
+   - [Create Liquibase Properties File](#create-liquibase-properties-file)  
+   - [Create SQL Changelog File](#create-sql-changelog-file)  
+   - [Run Update Command](#run-update-command)  
+   - [Troubleshooting PostgreSQL Permission Error](#troubleshooting-postgresql-permission-denied-for-schema-public-liquibase)  
+   - [Verify Schema in PostgreSQL](#verify-schema-in-postgresql)  
+   - [Tag a Version](#tag-a-version)  
+9. [Best Practices](#9-best-practices)  
+10. [Backup Strategy](#10-backup--strategy)  
+    - [Backup Before Applying Changes](#backup-before-applying-changes)  
+    - [Why Backup Is Critical](#why-backup-is-critical)  
+11. [Conclusion](#11-conclusion)  
+12. [Contact Information](#12-contact-information)  
+13. [References](#13-references)  
 
 ---
 
@@ -63,7 +61,7 @@ This Liquibase POC demonstrates a structured, Docker-free approach to database c
 
 The purpose of this POC is to demonstrate a controlled and automated approach to managing PostgreSQL schema changes using Liquibase. It ensures version-controlled deployments with rollback capability for safer and consistent database updates.
 
-## 2. What is Liquibase
+## 3. What is Liquibase
 
 Liquibase is an open‑source database schema change management solution that enables you to safely and reliably deliver schema changes from development through production. It uses structured change files—called changelogs—in SQL, XML, YAML, or JSON. 
 
@@ -71,7 +69,7 @@ These changelogs contain ordered “changesets” that Liquibase tracks in your 
 
 ---
 
-## 3. Pre-requisites
+## 4. Pre-requisites
 
 | Component                  | Description                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------- |
@@ -85,14 +83,14 @@ These changelogs contain ordered “changesets” that Liquibase tracks in your 
 
 ---
 
-## 4. Architecture Overview
+## 5. Architecture Overview
 
 <img width="600" height="511" alt="image" src="https://github.com/user-attachments/assets/37b3e599-f2df-4d9c-b1b6-a2494abe5f62" />
 
 
 ---
 
-## 5 Install Liquibase CLI
+## 6 Install Liquibase CLI
 
 - ## Install Liquibase on Linux
   
@@ -176,7 +174,7 @@ These changelogs contain ordered “changesets” that Liquibase tracks in your 
 
 ---
 
-## 6. Install PostgreSQL Database
+## 7. Install PostgreSQL Database
 
 - ## Install PostgreSQL on Linux
 
@@ -214,21 +212,23 @@ sudo -u postgres psql
 
 **Install PostgreSQL via Homebrew**
 
-```bash
+```
 brew update
 brew install postgresql
 ```
 
 **Start PostgreSQL**
 
-```bash
+```
 brew services start postgresql
+
 ```
 
 **Access PostgreSQL Shell**
 
-```bash
+```
 psql postgres
+
 ```
 
 - ## Install PostgreSQL on Windows
@@ -246,23 +246,24 @@ psql postgres
 
 **Access via Command Prompt**
 
-```cmd
+```
 psql -U postgres
+
 ```
 
 ---
 
-## 7. Step-by-Step Setup Guide
+## 8. Step-by-Step Setup Guide
 
 This guide walks you through how to use Liquibase with PostgreSQL from scratch. You’ll install the required tools, set up the environment, and perform schema versioning, tagging, and rollback—all using CLI and changelog files.
 
 ---
 
-### 7.1 Install PostgreSQL (Linux)
+### Install PostgreSQL (Linux)
 
 **Install PostgreSQL and its basic components.**
 
-```bash
+```
 sudo apt update
 sudo apt install postgresql postgresql-contrib -y
 ```
@@ -296,7 +297,7 @@ GRANT ALL PRIVILEGES ON DATABASE liquibase_demo TO liquibase_user;
 \q
 ```
 
-Test the Connection
+**Test the Connection**
 
 ```
 psql -U liquibase_user -d liquibase_demo -h localhost -W
@@ -307,7 +308,7 @@ psql -U liquibase_user -d liquibase_demo -h localhost -W
 
 ---
 
-### 7.2 Install Java (JDK 11 or higher)
+###  Install Java (JDK 11 or higher)
 
 **Liquibase requires Java to run.**
 
@@ -325,7 +326,7 @@ java -version
 
 ---
 
-### 7.3 Install Liquibase CLI
+###  Install Liquibase CLI
 
 **Download and extract Liquibase CLI:**
 
@@ -355,7 +356,7 @@ liquibase --version
 
 ---
 
-### 7.4 Download PostgreSQL JDBC Driver
+###  Download PostgreSQL JDBC Driver
 
 **Liquibase needs a JDBC driver to connect to PostgreSQL.**
 
@@ -409,17 +410,17 @@ If `wget` hangs or fails, try using `curl`:
  ```
    mkdir -p ~/liquibase/lib
  ```
-### 5. Move the JAR file to the library folder
+### 4. Move the JAR file to the library folder
 
 ```
   mv postgresql-42.7.3.jar ~/liquibase/lib/
 ```
-### 6. Set the classpath
+### 5. Set the classpath
 
 ```
   classpath=/home/ubuntu/liquibase/lib/postgresql-42.7.3.jar
 ```
-### 7. Verify the absolute path
+### 6. Verify the absolute path
 
 ```
   realpath ~/liquibase/lib/postgresql-42.7.3.jar
@@ -429,7 +430,7 @@ If `wget` hangs or fails, try using `curl`:
 
 ---
 
-### 7.5 Create Liquibase Properties File
+###  Create Liquibase Properties File
 
 **Create configuration file so you don’t pass CLI arguments every time.**
 
@@ -455,7 +456,7 @@ classpath=/home/ubuntu/liquibase/lib/postgresql-42.7.3.jar
 
 ---
 
-### 7.6 Create SQL Changelog File
+###  Create SQL Changelog File
 
 **This file describes the database changes (in order).**
 
@@ -499,7 +500,7 @@ SELECT 1;
 
 ---
 
-### 7.7 Run Update Command
+###  Run Update Command
 
 **Apply all defined changes to the database.**
 
@@ -511,7 +512,7 @@ liquibase update
 
 ---
 
-### 8. Troubleshooting: PostgreSQL "permission denied for schema public" (Liquibase)
+###  Troubleshooting: PostgreSQL "permission denied for schema public" (Liquibase)
 
 This error occurs when the PostgreSQL user (e.g. `liquibase_user`) does not have sufficient privileges on the `public` schema to create Liquibase metadata tables like `databasechangelog`.
 
@@ -573,7 +574,7 @@ liquibase update
 
 ---
 
-### 7.8 Verify Schema in PostgreSQL
+###  Verify Schema in PostgreSQL
 
 **Check if tables were created and changelog tracked.**
 
@@ -588,7 +589,7 @@ sudo -u postgres psql liquibase_demo -c "SELECT * FROM DATABASECHANGELOG;"
 
 ---
 
-### 7.9 Tag a Version
+###  Tag a Version
 
 **Tag the current database state.**
 
@@ -601,7 +602,7 @@ liquibase tag v2.0
 ---
 
 
-## 8. Best Practices
+## 9. Best Practices
 
 | Best Practice           | Explanation                                         |
 | ----------------------- | --------------------------------------------------- |
@@ -615,13 +616,13 @@ liquibase tag v2.0
 
 ---
 
-## 9. Backup  Strategy
+## 10. Backup  Strategy
 
 Before applying any changes to a live database, it's essential to prepare for failure scenarios. This section explains how to create backups, structure changesets for rollback, and use Liquibase rollback commands safely.
 
 ---
 
-### 9.1 Backup Before Applying Changes
+###  Backup Before Applying Changes
 
 Always take a full database backup before applying changes to ensure recoverability.
 
@@ -645,7 +646,7 @@ Replace `liquibase_demo` with your actual database name. Ensure the user has per
 ---
 
 
-## 10. Conclusion
+## 11. Conclusion
 
 This POC demonstrates a complete Liquibase lifecycle on a PostgreSQL database — from setup to schema deployment, tagging, and rollback. It uses the CLI, avoids Docker, and promotes clean changelog tracking with Git. This guide is suitable for beginners and teams aiming to implement database DevOps workflows reliably.
 
@@ -660,7 +661,7 @@ This POC demonstrates a complete Liquibase lifecycle on a PostgreSQL database �
 
 ---
 
-## 12. References
+## 13. References
 
 | Link                                                                              | Description                 |
 | --------------------------------------------------------------------------------- | --------------------------- |
