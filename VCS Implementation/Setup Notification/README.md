@@ -55,7 +55,7 @@ Go to https://github.com/, log in, and open the target repository where you want
 - Click the Watch button at the top right.
 - Select All Activity so you receive notifications for PR creation, updates, and comments.
 
-<img width="700" height="555" alt="image" src="https://github.com/user-attachments/assets/9837a640-d488-4920-988f-6470e7e15595" />
+<img width="600" height="555" alt="image" src="https://github.com/user-attachments/assets/9837a640-d488-4920-988f-6470e7e15595" />
 
 
 #### Step 3: Configure email notifications
@@ -78,9 +78,9 @@ In Customize email updates, enable:
 - Pull Request review comment
 - Click Save
 
-<img width="700" height="463" alt="image" src="https://github.com/user-attachments/assets/99ff05ee-a100-4a9e-bc8a-83caf2d392aa" />
+<img width="600" height="463" alt="image" src="https://github.com/user-attachments/assets/99ff05ee-a100-4a9e-bc8a-83caf2d392aa" />
 
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/4bc365b3-6caa-4a2b-b124-215ed945871c" />
+<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/4bc365b3-6caa-4a2b-b124-215ed945871c" />
 
 ### 2. GitHub Slack Integration (Optional)
 
@@ -89,9 +89,9 @@ In Customize email updates, enable:
 - Go to your Slack workspace and visit: https://slack.github.com/.
 - Click Add to Slack and authorize GitHub.
 
-<img width="700" height="512" alt="image" src="https://github.com/user-attachments/assets/5e3ad719-aa00-498a-b965-1f494f3e0ef9" />
-<img width="700" height="512" alt="image" src="https://github.com/user-attachments/assets/84888102-7987-4440-b994-839d9ed1ca8b" />
-<img width="700" height="512" alt="image" src="https://github.com/user-attachments/assets/f0517b06-f938-4ebb-826c-be3bec4ca400" />
+<img width="600" height="512" alt="image" src="https://github.com/user-attachments/assets/5e3ad719-aa00-498a-b965-1f494f3e0ef9" />
+<img width="600" height="512" alt="image" src="https://github.com/user-attachments/assets/84888102-7987-4440-b994-839d9ed1ca8b" />
+<img width="600" height="512" alt="image" src="https://github.com/user-attachments/assets/f0517b06-f938-4ebb-826c-be3bec4ca400" />
 
 
 #### Step 3: Subscribe your GitHub repository to a Slack channel
@@ -103,7 +103,9 @@ Go to the Slack channel and run the following command:
 ```
 /github subscribe tina-snatak/sprint-2
 ```
-<img width="600" height="422" alt="image" src="https://github.com/user-attachments/assets/d235c37b-0e6f-434f-8a09-2d2472b52bfb" />
+<img width="600" height="332" alt="image" src="https://github.com/user-attachments/assets/d0105a6f-6403-4f4c-8ad1-b73add6d1c69" />
+
+
 
 #### Step 4: Enable PR event notifications in Slack
 
@@ -116,29 +118,25 @@ Go to the Slack channel and run the following command:
 ```
 <img width="600" height="422" alt="image" src="https://github.com/user-attachments/assets/e12c07fd-83af-4743-b58b-a3f2ad85a488" />
 
+#### For more information, see the ().
 
-### 6. Add Gmail Credentials to GitHub Secrets:
+---
 
-**Go to your GitHub repository.**
+### 2. Set up Notifications for Commit Push to Key Branches
 
-**Click on Settings -> Secrets -> Actions -> New repository secret.**
+For detailed setup instructions, check the (https://github.com/Snaatak-Apt-Get-Swag/documentation/blob/SCRUM-105-tina/VCS/Notification-System/Introduction/README.md).
 
-**Add two secrets:**
+---
 
-**EMAIL_USERNAME: Your Gmail address (e.g., your-email@gmail.com).**
+### 3. Step-by-step — GitHub branch create/delete notifications
 
-**EMAIL_PASSWORD: The App Password you generated earlier from Gmail.**
 
-![Screenshot 2024-09-23 200808](https://github.com/vardaan412/snaatak_phase/blob/9f297e6da5dd54ce6c73cca4781bfaed2f072ffc/commit-img/6.png)
 
-### 7. Commit and Push the Workflow File:
+<img width="600" height="722" alt="image" src="https://github.com/user-attachments/assets/f7fec859-4e26-421f-8848-e84c63d23a8f" />
 
-**Once you add the workflow file, every time a commit is pushed to the specified repo (e.g., code-commit-demo), the GitHub Action will send an email with the details of the commit (message, author, and URL).**
 
-![Screenshot 2024-09-23 235555](https://github.com/vardaan412/snaatak_phase/blob/9f297e6da5dd54ce6c73cca4781bfaed2f072ffc/commit-img/7.png)
 
-![Screenshot 2024-09-23 235555](https://github.com/vardaan412/snaatak_phase/blob/9f297e6da5dd54ce6c73cca4781bfaed2f072ffc/commit-img/8.png)
-
+  
 ##  Conclusion
 The POC successfully demonstrates an automated email notification system for new code commits, in a GitHub repository. It uses GitHub Actions and a secure email integration via Gmail credentials. This solution ensures timely notifications for relevant code changes while filtering out unnecessary merge events.
  
