@@ -1,14 +1,13 @@
 <img src="https://developer.apple.com/news/images/og/notifications-og.jpg" alt="AWS Service Control Policies Workflow Diagram" width="400"/>
 
 
-
 # VCS - Setup Notification 
 
 ## Author Information
 
 | **Author**        | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level**   | **Reviewer**      |
-|-------------------|----------------|-------------|----------------------|--------------------|-------------|-------------------|
-| Tina Bhatnagar     | 11-08-25       | v1.0        | Tina Bhatnagar       | 11-08-25           | Internal    | Rohit Chopra      |
+|-------------------|----------------|-------------|---------------------|--------------------|-------------|-------------------|
+| Tina Bhatnagar    | 11-08-25       | v1.0        | Tina Bhatnagar      | 11-08-25           | Internal    | Rohit Chopra      |
 
 ---
 
@@ -41,68 +40,82 @@ The goal is to configure notifications that alert team members when:
 | **Repository Access** | Read/Write/Admin permissions to the target repository for which you want to receive notifications. |
 | **Configuration Permissions** | Ability to modify repository settings and set up integrations (email, Slack, webhook, etc.). |
 
+---
 
-##  Steps to Set up Email Notification
+### 1.  Steps to Set up Notifications for PR/MR Create, Update, or Comment Events
 
-### 1. **Sign in to GitHub**: Go to [GitHub](https://github.com) and log in to your account.
-![codecommit drawio (2)](https://github.com/vardaan412/snaatak_phase/blob/9f297e6da5dd54ce6c73cca4781bfaed2f072ffc/commit-img/1.png)
+- #### GitHub Email Notification Setup
 
+#### Step 1: Sign in to GitHub and open the repository
 
-### 2. Create a repository for which you want to configure notifications for code commits.
+Go to https://github.com/, log in, and open the target repository where you want PR/MR notifications.
 
-![Screenshot 2024-09-23 164450](https://github.com/vardaan412/snaatak_phase/blob/9f297e6da5dd54ce6c73cca4781bfaed2f072ffc/commit-img/2.png)
+#### Step 2: Watch the repository
 
-### 3. Now, click on the repository you created and navigate to the Settings tab at the top.
+- Click the Watch button at the top right.
+- Select All Activity so you receive notifications for PR creation, updates, and comments.
 
-![Screenshot 2024-09-23 173912](https://github.com/vardaan412/snaatak_phase/blob/9f297e6da5dd54ce6c73cca4781bfaed2f072ffc/commit-img/3.png)
-
-### 4. Generate an App Password for Gmail: If you are using Gmail, you'll need to generate an App Password for your Google account:
-
-**Go to your Google Account.**
-
-**Navigate to Security -> Signing in to Google -> App Passwords.**
-
-**Choose Mail and select your device, then generate a password and copy it.**
-
-![Screenshot 2024-09-23 200443](https://github.com/vardaan412/snaatak_phase/blob/9f297e6da5dd54ce6c73cca4781bfaed2f072ffc/commit-img/4.png)
-
-### 5. Set up GitHub Action Workflow:
-
-**Create a GitHub Actions workflow file in your repository to send an email when a code commit is made.**
-
-**In your GitHub repository, create a workflow file in .github/workflows/ (e.g., send-email-on-codecommit.yml):**
+<img width="700" height="555" alt="image" src="https://github.com/user-attachments/assets/9837a640-d488-4920-988f-6470e7e15595" />
 
 
-```yaml
-name: Send Commit Email
+#### Step 3: Configure email notifications
 
-on:
-  push:
-    branches:
-      - main
+- Click your profile icon → Settings.
+- Go to Notifications in the left sidebar.
+- Under Participating & @mentions, check Email.
 
-jobs:
-  email_notify:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send Commit Notification Email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "📬 New Commit to ${{ github.repository }}"
-          to: saxenavardaan18@gmail.com
-          from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
-          html_body: |
-            <h2>✅ New Commit Notification</h2>
-            <p><strong>📁 Repository:</strong> ${{ github.repository }}</p>
-            <p><strong>🌿 Branch:</strong> ${{ github.ref_name }}</p>
-            <p><strong>✍️ Author:</strong> ${{ github.event.head_commit.author.name }} &lt;${{ github.event.head_commit.author.email }}&gt;</p>
-            <p><strong>📝 Message:</strong> ${{ github.event.head_commit.message }}</p>
-            <p><a href="https://github.com/${{ github.repository }}/commit/${{ github.sha }}">🔗 View Commit on GitHub</a></p>
+<img width="600" height="532" alt="image" src="https://github.com/user-attachments/assets/78d460e5-4e92-46bb-989b-ed49ee6e28ad" />
+
+<img width="600" height="440" alt="image" src="https://github.com/user-attachments/assets/4901487b-d2a7-450e-a4e9-706c02aa066b" />
+
+
+#### Step 4: Customize PR event triggers
+
+In Customize email updates, enable:
+
+- Pull Request opened
+- Pull Request updated
+- Pull Request review comment
+- Click Save
+
+<img width="700" height="463" alt="image" src="https://github.com/user-attachments/assets/99ff05ee-a100-4a9e-bc8a-83caf2d392aa" />
+
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/4bc365b3-6caa-4a2b-b124-215ed945871c" />
+
+### 2. GitHub Slack Integration (Optional)
+
+#### Step 1: Install GitHub Slack App
+
+- Go to your Slack workspace and visit: https://slack.github.com/.
+- Click Add to Slack and authorize GitHub.
+
+<img width="700" height="512" alt="image" src="https://github.com/user-attachments/assets/5e3ad719-aa00-498a-b965-1f494f3e0ef9" />
+<img width="700" height="512" alt="image" src="https://github.com/user-attachments/assets/84888102-7987-4440-b994-839d9ed1ca8b" />
+<img width="700" height="512" alt="image" src="https://github.com/user-attachments/assets/f0517b06-f938-4ebb-826c-be3bec4ca400" />
+
+
+#### Step 3: Subscribe your GitHub repository to a Slack channel
+Go to the Slack channel and run the following command:
+
+/github subscribe owner/repo
+
+**Example:**
 ```
+/github subscribe tina-snatak/sprint-2
+```
+<img width="600" height="422" alt="image" src="https://github.com/user-attachments/assets/d235c37b-0e6f-434f-8a09-2d2472b52bfb" />
+
+#### Step 4: Enable PR event notifications in Slack
+
+```
+/github subscribe owner/repo pulls comments reviews
+```
+**Example:**
+```
+/github subscribe tina-snatak/sprint-2 pulls comments reviews
+```
+<img width="600" height="422" alt="image" src="https://github.com/user-attachments/assets/e12c07fd-83af-4743-b58b-a3f2ad85a488" />
+
 
 ### 6. Add Gmail Credentials to GitHub Secrets:
 
@@ -136,7 +149,3 @@ The POC successfully demonstrates an automated email notification system for new
 |https://www.youtube.com/watch?v=qToZN5S67AM%7C **SDet Automation**|
 |https://tinyurl.com/bdpf3ajc%7C**GIT**%7C
 
-##  Contact Information 
-|Name|Email Address|
-|:---:|:---:|
-|**Vardaan Saxena**|vardaan.saxena.snaatak@mygurukulam.co |
