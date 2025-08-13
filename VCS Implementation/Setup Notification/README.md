@@ -11,20 +11,26 @@
 
 ---
 
-# Table of Content 
-1. [ Purpose](#purpose)
-2. [ Prerequisites](#prerequisites)
-3. [Steps to Set up Email Notificatin](#steps-to-set-up-email-notification)
-4. [ Conclusion](#conclusion)
-5. [ References](#references ) 
-6. [ Contact Information ](#contact-information )
+## Table of Content
+
+1. [Introduction](#1-introduction)
+2. [Purpose](#2-purpose)
+3. [Pre-requisites](#3-pre-requisites)
+4. [Steps to Set up Notifications for PR/MR Create, Update, or Comment Events](#4--steps-to-set-up-notifications-for-prmr-create-update-or-comment-events)
+5. [GitHub Slack Integration (Optional)](#5-github-slack-integration-optional)
+6. [Set up Notifications for Commit Push to Key Branches](#6-set-up-notifications-for-commit-push-to-key-branches)
+7. [Notifications for Branch Create/Delete (GitHub Webhook)](#7-notifications-for-branch-createdelete-github-webhook)
+8. [Conclusion](#8-conclusion)
+9. [FAQs](#9-faqs)
+10. [References](#10-references)
+
    
 
-#  Introduction
+## 1. Introduction
 This document outlines the setup process for enabling automated notifications in a Version Control System (VCS) to enhance team collaboration and awareness of repository changes.
 
      
-#  Purpose 
+## 2. Purpose 
 The goal is to configure notifications that alert team members when:
 
 - A code review (PR/MR) is created, updated, or commented on.
@@ -32,17 +38,17 @@ The goal is to configure notifications that alert team members when:
 - A new branch is created or deleted.
 
 
-## Pre-requisites
+## 3. Pre-requisites
 
 | Requirement | Description |
 |-------------|-------------|
 | **GitHub Account** | A valid GitHub account is required to access and configure repository settings. |
 | **Repository Access** | Read/Write/Admin permissions to the target repository for which you want to receive notifications. |
-| **Configuration Permissions** | Ability to modify repository settings and set up integrations (email, Slack, webhook, etc.). |
+| **Configuration Permissions** | Ability to modify repository settings and set up integrations (email, Slack, webhook, etc.) |
 
 ---
 
-### 1.  Steps to Set up Notifications for PR/MR Create, Update, or Comment Events
+## 4.  Steps to Set up Notifications for PR/MR Create, Update, or Comment Events
 
 - #### GitHub Email Notification Setup
 
@@ -82,7 +88,7 @@ In Customize email updates, enable:
 
 <img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/4bc365b3-6caa-4a2b-b124-215ed945871c" />
 
-### 2. GitHub Slack Integration (Optional)
+## 5. GitHub Slack Integration (Optional)
 
 #### Step 1: Install GitHub Slack App
 
@@ -118,32 +124,84 @@ Go to the Slack channel and run the following command:
 ```
 <img width="600" height="422" alt="image" src="https://github.com/user-attachments/assets/e12c07fd-83af-4743-b58b-a3f2ad85a488" />
 
-#### For more information, see the ().
+#### For more information, see the (https://github.com/Snaatak-Apt-Get-Swag/documentation/blob/SCURM-99-sachin/VCS/Pull-Request/POC/README.md).
 
 ---
 
-### 2. Set up Notifications for Commit Push to Key Branches
+## 6. Set up Notifications for Commit Push to Key Branches
 
 For detailed setup instructions, check the (https://github.com/Snaatak-Apt-Get-Swag/documentation/blob/SCRUM-105-tina/VCS/Notification-System/Introduction/README.md).
 
 ---
 
-### 3. Step-by-step — GitHub branch create/delete notifications
+## 7. Notifications for Branch Create/Delete (GitHub Webhook)
 
+#### Step 1: Open Repository Settings
+- Go to your GitHub repository.
+- Click Settings (top menu).
 
+<img width="600" height="533" alt="image" src="https://github.com/user-attachments/assets/9703cdc9-c8ca-49e4-acdf-f9bea605dd63" />
 
-<img width="600" height="722" alt="image" src="https://github.com/user-attachments/assets/f7fec859-4e26-421f-8848-e84c63d23a8f" />
+#### Step 2: Add a New Webhook
+- From the left menu, select Webhooks.
+- Click Add webhook.
 
+<img width="600" height="624" alt="image" src="https://github.com/user-attachments/assets/bb3f6326-d620-4d5f-8e9f-f4bb23604b0f" />
 
+#### Step 3: Configure Webhook Details
+- Payload URL → Paste your Slack Incoming Webhook URL.
+- Content type → Select application/json.
+- Secret → You can leave this empty (not required for Slack webhooks).
+#### Step 4: Save Webhook
+- Click Add webhook to save the configuration.
 
+<img width="600" height="757" alt="image" src="https://github.com/user-attachments/assets/5817e763-1fe3-4f1f-b36f-90e2ab1d034e" />
+<img width="600" height="362" alt="image" src="https://github.com/user-attachments/assets/6fc65f2c-1aff-4b8b-9fcd-ad91ceb15b15" />
+<img width="600" height="857" alt="image" src="https://github.com/user-attachments/assets/55960023-f1f0-4c39-8120-0b260e0c76b1" />
+<img width="600" height="174" alt="image" src="https://github.com/user-attachments/assets/70194544-ae4d-4caa-b5c9-6a10c4e5a0e1" />
+<img width="600" height="874" alt="image" src="https://github.com/user-attachments/assets/26d2986a-c0ce-45f7-99a2-2452840473e1" />
+
+- Create (branch creation)
+<img width="600" height="444" alt="Screenshot 2025-08-13 142402" src="https://github.com/user-attachments/assets/4f2467f7-0d04-437f-b876-9d159e76cce1" />
+<img width="1036" height="382" alt="image" src="https://github.com/user-attachments/assets/62835b97-3833-41db-92e4-f0432c150188" />
+
+- Delete (branch deletion)
+<img width="600" height="123" alt="image" src="https://github.com/user-attachments/assets/275ab43c-37d4-4cea-95fe-82ea84903653" />
+<img width="600" height="301" alt="image" src="https://github.com/user-attachments/assets/26ba05e6-82d2-450c-82b2-5e525bbe2b1f" />
   
-##  Conclusion
-The POC successfully demonstrates an automated email notification system for new code commits, in a GitHub repository. It uses GitHub Actions and a secure email integration via Gmail credentials. This solution ensures timely notifications for relevant code changes while filtering out unnecessary merge events.
+
+
+## 8. Conclusion
+This POC sets up GitHub to send automated notifications for pull requests, key branch commits, and branch creation/deletion. Email alerts use GitHub’s built-in settings, while Slack alerts use GitHub–Slack integration and webhooks. Combined, these methods deliver real-time updates for improved collaboration, visibility, and response speed.
+
+
+## 9. FAQs
+
+**Q1: Will I get notified for all branches using this setup?**  
+Yes — if you configure the webhook for **Create** and **Delete** events without specifying branch names, it will trigger for any branch creation or deletion.
+
+**Q2: Can I limit notifications to specific branches only?**  
+Yes — in GitHub Actions or your webhook handler, you can filter events by branch name (e.g., `main`, `develop`) before sending notifications.
+
+**Q3: Do I need admin access to configure webhooks?**  
+Yes — only repository admins or users with **Manage Webhooks** permission can set up or modify webhooks.
+
+**Q4: Is the Slack Incoming Webhook URL secure?**  
+Treat it like a password — do not commit it to source control. Store it in **GitHub Secrets** or an environment variable.
+
+**Q5: Can I test if my webhook works without creating a branch?**  
+Yes — GitHub’s Webhook settings page allows you to **Redeliver** past payloads to test your integration.
+
+**Q6: Can I use Microsoft Teams or other chat apps instead of Slack?**  
+Yes — the same concept works for **Teams**, **Discord**, or any service that supports incoming webhooks.
+
  
-##  References 
-|links | Description |
-|-------|------------|
-|https://youtu.be/oMU9MUIXPyI?feature=shared%7C**Rainbow talks** |
-|https://www.youtube.com/watch?v=qToZN5S67AM%7C **SDet Automation**|
-|https://tinyurl.com/bdpf3ajc%7C**GIT**%7C
+
+## 10. References
+
+| Link | Description |
+|------|-------------|
+| [SDet Automation – GitHub Webhook Integration](#) | Detailed guide on configuring GitHub webhooks. |
+| [GitHub Webhooks Documentation](#) | Official GitHub docs for webhook events. |
+| [Slack Incoming Webhooks](#) | Guide to sending messages to Slack via webhooks. |
 
