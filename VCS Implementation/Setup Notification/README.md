@@ -24,12 +24,13 @@
 9. [FAQs](#9-faqs)
 10. [References](#10-references)
 
-   
+---   
 
 ## 1. Introduction
 This document outlines the setup process for enabling automated notifications in a Version Control System (VCS) to enhance team collaboration and awareness of repository changes.
 
-     
+---
+
 ## 2. Purpose 
 The goal is to configure notifications that alert team members when:
 
@@ -37,6 +38,7 @@ The goal is to configure notifications that alert team members when:
 - A commit is pushed to key branches (e.g., main, develop).
 - A new branch is created or deleted.
 
+---
 
 ## 3. Pre-requisites
 
@@ -87,6 +89,8 @@ In Customize email updates, enable:
 <img width="600" height="463" alt="image" src="https://github.com/user-attachments/assets/99ff05ee-a100-4a9e-bc8a-83caf2d392aa" />
 
 <img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/4bc365b3-6caa-4a2b-b124-215ed945871c" />
+
+---
 
 ## 5. GitHub Slack Integration (Optional)
 
@@ -169,11 +173,12 @@ For detailed setup instructions, check the (https://github.com/Snaatak-Apt-Get-S
 <img width="600" height="123" alt="image" src="https://github.com/user-attachments/assets/275ab43c-37d4-4cea-95fe-82ea84903653" />
 <img width="600" height="301" alt="image" src="https://github.com/user-attachments/assets/26ba05e6-82d2-450c-82b2-5e525bbe2b1f" />
   
-
+---
 
 ## 8. Conclusion
 This POC sets up GitHub to send automated notifications for pull requests, key branch commits, and branch creation/deletion. Email alerts use GitHub’s built-in settings, while Slack alerts use GitHub–Slack integration and webhooks. Combined, these methods deliver real-time updates for improved collaboration, visibility, and response speed.
 
+---
 
 ## 9. FAQs
 
@@ -195,7 +200,7 @@ Yes — GitHub’s Webhook settings page allows you to **Redeliver** past payloa
 **Q6: Can I use Microsoft Teams or other chat apps instead of Slack?**  
 Yes — the same concept works for **Teams**, **Discord**, or any service that supports incoming webhooks.
 
- 
+ ---
 
 ## 10. References
 
