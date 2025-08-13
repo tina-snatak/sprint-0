@@ -22,7 +22,8 @@
 7. [Notifications for Branch Create/Delete (GitHub Webhook)](#7-notifications-for-branch-createdelete-github-webhook)
 8. [Conclusion](#8-conclusion)
 9. [FAQs](#9-faqs)
-10. [References](#10-references)
+10. [Contact Information](#10-contact-information)  
+11. [References](#11-references)
 
 ---   
 
@@ -202,7 +203,17 @@ Yes — the same concept works for **Teams**, **Discord**, or any service that s
 
  ---
 
-## 10. References
+## 10. **Contact Information**
+
+
+| Name| Email Address      | GitHub | URL |
+|-----|--------------------------|-------------|---------|
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co)|  tina-snatak  | https://github.com/tina-snatak/ |
+
+---
+
+
+## 11. References
 
 | Link | Description |
 |------|-------------|
