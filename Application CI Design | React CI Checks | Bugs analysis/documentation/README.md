@@ -116,8 +116,7 @@ React CI bug analysis refers to the process of identifying and analyzing code de
 
 ---
 
-## 9. POC 
- To see the POC please refer this link [LINK](https://github.com/snaatak-Downtime-Crew/Documentation/blob/SCRUMS-152-harsh/application-ci/checks/react/bugs-analysis/poc/README.md)
+
 
 ---
 
