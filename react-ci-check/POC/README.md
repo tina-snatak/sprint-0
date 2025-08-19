@@ -7,16 +7,21 @@
 | Tina Bhatnagar  | 17-08-25    | v1.0  |  Tina Bhatnagar |17-08-25     | Internal    | Rohit Chopra    |
 
 
-- [Introduction](#-introduction)  
-- [Setup Instructions](#-setup-instructions)  
-  - [Install SonarQube Locally](#install-sonarqube-locally)  
-  - [Configure SonarQube Project](#configure-sonarqube-project)  
-  - [Install SonarScanner](#install-sonarscanner)  
-  - [Create `sonar-project.properties`](#create-sonar-projectproperties)  
-  - [Run the Analysis](#run-the-analysis)  
-  - [Conclusion](#conclusion)
-- [Contacts](#contacts)  
-- [References](#references)
+
+# Table of Contents  
+
+1. [Introduction](#1-introduction)  
+2. [Setup Instructions](#2-setup-instructions)  
+   2.1 [Install SonarQube Locally](#21-install-sonarqube-locally)  
+   2.2 [Configure SonarQube Project](#22-configure-sonarqube-project)  
+   2.3 [Install SonarScanner](#23-install-sonarscanner)  
+   2.4 [Create sonar-project.properties](#24-create-sonar-projectproperties)  
+   2.5 [Run the Analysis](#25-run-the-analysis)  
+3. [Conclusion](#3-conclusion)  
+4. [Contacts](#4-contacts)  
+5. [References](#5-references)  
+
+
 
 ---
 
@@ -26,9 +31,9 @@ This Proof of Concept (POC) demonstrates how to analyze a **React codebase using
 
 ---
 
-## 2.  Setup Instructions
+## 2. Setup Instructions
 
-- ####  Install SonarQube Locally
+ #### 2.1 Install SonarQube Locally
 
 Before setting up, make sure the following packages and tools are installed:
 
@@ -73,7 +78,7 @@ Access the dashboard at:
 
 ---
 
-- ####  Configure SonarQube Project
+ #### 2.2 Configure SonarQube Project
 
 1. Log in to the SonarQube dashboard.
 2. Create a **new project**.
@@ -81,7 +86,7 @@ Access the dashboard at:
 
 ---
 
-- ####  Install SonarScanner
+ #### 2.3 Install SonarScanner
 
 ```bash
 # Download & install
@@ -100,7 +105,7 @@ sonar-scanner -v
 
 ---
 
-- ####  Create `sonar-project.properties`
+ #### 2.4 Create `sonar-project.properties`
 
 In the root of your React project, create a file:
 
@@ -124,7 +129,7 @@ Replace `<YOUR_GENERATED_TOKEN>` with the token you generated in the UI.
 
 ---
 
-- ####   Run the Analysis
+ #### 2.5 Run the Analysis
 
 ```bash
 sonar-scanner
@@ -162,7 +167,7 @@ This POC successfully demonstrates how to perform bug analysis and code quality 
 
 ---
 
-## 5.  References
+## 5. References
 
 | Title                   | Link                                                                 |
 |-------------------------|----------------------------------------------------------------------|
