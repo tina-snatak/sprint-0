@@ -1,6 +1,6 @@
 # Cost Tag Reports via Cost Explorer Implementation
 
-<img width="600" height="430" alt="image" src="https://github.com/user-attachments/assets/bd4101f9-625a-44d4-b039-a199125aa9c1" />
+<img width="500" height="430" alt="image" src="https://github.com/user-attachments/assets/bd4101f9-625a-44d4-b039-a199125aa9c1" />
 
 ---
 
@@ -12,14 +12,18 @@
 
 ---
 
-## Table of Contents
--  [Introduction](#introduction)
--  [Pre-requisites](#pre-requisites)
--  [Step-by-Step Setup Guide](#step-by-step-setup-guide)
--  [Example Use Case](#example-use-case)
--  [Best Practices](#best-practices)
--  [Contact Information](#contact-information)
--  [References](#references)
+## Table of Contents  
+
+1. [Introduction](#1-introduction)  
+2. [Pre-requisites](#2-pre-requisites)  
+3. [Step-by-Step Setup Guide](#3-step-by-step-setup-guide)  
+   - [Step 1 - Enable Cost Allocation Tags](#step-1--enable-cost-allocation-tags)  
+   - [Step 2 - Save the Report in AWS](#step-2--save-the-report-in-aws)  
+   - [Step 3 - Save and Export Reports](#step-3--save-and-export-reports)  
+4. [Example Use Case](#4-example-use-case)  
+5. [Best Practices](#5-best-practices)  
+6. [Contact Information](#6-contact-information)  
+7. [References](#7-references)  
 
 ---
 
