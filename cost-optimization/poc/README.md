@@ -1,7 +1,6 @@
-# Cost Tag Reports via Cost Explorer Implementation
-
 <img width="500" height="430" alt="image" src="https://github.com/user-attachments/assets/bd4101f9-625a-44d4-b039-a199125aa9c1" />
 
+# Cost Tag Reports via Cost Explorer Implementation
 ---
 
 ##   Author Information
