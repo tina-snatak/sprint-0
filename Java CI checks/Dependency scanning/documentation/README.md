@@ -152,6 +152,6 @@ Dependency scanning is the process of automatically checking the libraries (depe
 | **Title** | **Link**            |
 |----------|-------------------------------|
 |Snyk| [Link](https://snyk.io)|
-|OWASP Dependency-Check | [Link](https://owasp.org/www-project-dependency-check/)%7C
-|GitHub Dependabo| [Link](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically)%7C
-|Sonatype Nexus IQ|[Link](https://www.sonatype.com/product-nexus-iq)%7C
+|OWASP Dependency-Check | [Link](https://owasp.org/www-project-dependency-check/)
+|GitHub Dependabo| [Link](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically)
+|Sonatype Nexus IQ|[Link](https://www.sonatype.com/product-nexus-iq)
