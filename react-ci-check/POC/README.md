@@ -1,11 +1,10 @@
-#  POC for React CI Design Bugs Analysis 
+#  POC for React CI Check Bugs Analysis 
 
-##  Author Information
 ##   Author Information
 
 | **Author**   | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level** | **Reviewer**  |
 |--------------|----------------|-------------|---------------------|--------------------|-----------|---------------|
-| Tina Bhatnagar  | 13-08-25    | v1.0  |  Tina Bhatnagar |13-08-25     | Internal    | Rohit Chopra    |
+| Tina Bhatnagar  | 17-08-25    | v1.0  |  Tina Bhatnagar |17-08-25     | Internal    | Rohit Chopra    |
 
 
 - [Introduction](#-introduction)  
@@ -21,35 +20,35 @@
 
 ---
 
-##  Introduction
+## 1. Introduction
 
 This Proof of Concept (POC) demonstrates how to analyze a **React codebase using SonarQube** for detecting bugs, vulnerabilities, and code smells — **without CI tools like Jenkins, GitHub Actions, Docker, or YAML pipelines**.
 
 ---
 
-##   Setup Instructions
+## 2.  Setup Instructions
 
-###  Install SonarQube Locally
+- ####  Install SonarQube Locally
 
 Before setting up, make sure the following packages and tools are installed:
 
-# Update system & install basic tools
+- #### Update system & install basic tools
 ```
 sudo apt update
 sudo apt install -y ca-certificates curl gnupg lsb-release unzip ufw
 ```
 
-# Install Node.js LTS (Recommended for JS analysis)
+- #### Install Node.js LTS (Recommended for JS analysis)
 ```
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
 
-# Verify installation
+- #### Verify installation
 ```
 node -v
 ```
-# Install Docker
+- #### Install Docker
 
 ```
 # Install Docker 
@@ -61,7 +60,7 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 docker --version
 ```
-# Run SonarQube
+- #### Run SonarQube
 
 ```bash
 docker run -d --name sonarqube -p 9000:9000 sonarqube:lts
@@ -74,7 +73,7 @@ Access the dashboard at:
 
 ---
 
-###  Configure SonarQube Project
+- ####  Configure SonarQube Project
 
 1. Log in to the SonarQube dashboard.
 2. Create a **new project**.
@@ -82,7 +81,7 @@ Access the dashboard at:
 
 ---
 
-###  Install SonarScanner
+- ####  Install SonarScanner
 
 ```bash
 # Download & install
@@ -101,7 +100,7 @@ sonar-scanner -v
 
 ---
 
-###  Create `sonar-project.properties`
+- ####  Create `sonar-project.properties`
 
 In the root of your React project, create a file:
 
@@ -125,7 +124,7 @@ Replace `<YOUR_GENERATED_TOKEN>` with the token you generated in the UI.
 
 ---
 
-###   Run the Analysis
+- ####   Run the Analysis
 
 ```bash
 sonar-scanner
@@ -134,35 +133,36 @@ sonar-scanner
 <img width="600" height="557" alt="image" src="https://github.com/user-attachments/assets/03e70645-5dbc-42a9-887c-f5318c056466" />
 
 
-## You can see the bugs by the URL
+- #### You can see the bugs by the URL
 
 ```bash
 
 http://65.2.168.91:9000/dashboard?id=react-app
 
 ```
-![Screenshot from 2025-05-23 19-32-26](https://github.com/user-attachments/assets/dd78ee81-b823-447c-b379-feee64d4a6d7)
+<img width="600" height="966" alt="image" src="https://github.com/user-attachments/assets/be68ddf3-c88d-41a3-bfe1-4289af4e7006" />
 
 
 **Note**- Change here with your public IP
 
 ---
 
-### Conclusion
+## 3. Conclusion
 
 This POC successfully demonstrates how to perform bug analysis and code quality checks on a React application using SonarQube without any CI/CD tools. By manually configuring and running the scanner, developers can identify bugs, vulnerabilities, and code smells early in the development cycle.
 
 ---
 
-##  Contacts
+## 4. Contacts
 
-| Name               | Email                                 |
-|--------------------|----------------------------------------|
-| Harsh Wardhan Singh | harsh.singh.snaatak@mygurukulam.co    |
+
+| Name| Email Address      | GitHub | URL |
+|-----|--------------------------|-------------|---------|
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co)|  tina-snatak  | https://github.com/tina-snatak/ |
 
 ---
 
-##   References
+## 5.  References
 
 | Title                   | Link                                                                 |
 |-------------------------|----------------------------------------------------------------------|
