@@ -1,96 +1,123 @@
+<img width="200" height="363" alt="image" src="https://github.com/user-attachments/assets/c9ad19f3-e3ff-42f0-9cfe-1885619878f2" />
+
 # GoLang CI Checks: Bugs Analysis POC
 
-## Author Information
+##  Author Information
 
-| Created by | Created on | Version | Last Updated On | Pre Reviewer | L0 Reviewer | L1 Reviewer | L2 Reviewer |
-| ---------- | ---------- | ------- | --------------- | ------------ | ----------- | ----------- | ----------- |
-| Sonal      | 11-08-2025 | V 1.0   | 11-08-2025      | Anjali       |             |             |             |
+| **Author**   | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level** | **Reviewer**  |
+|--------------|----------------|-------------|---------------------|--------------------|-----------|---------------|
+| Tina Bhatnagar  | 21-08-25    | v1.0  |  Tina Bhatnagar |21-08-25     | Internal    | Rohit Chopra    |
 
 ---
 
 ## Table of Contents
 
-* [Introduction](#introduction)
-* [Prerequisites](#prerequisites)
-* [Bugs Analysis Document](#bugs-analysis-document)
-* [Step-by-Step Instructions](#step-by-step-instructions)
+1. [Introduction](#1-introduction)  
+2. [Pre-requisites](#2-pre-requisites)  
+3. [System Requirements](#3-system-requirements)  
+4. [Setup and Execution](#4-setup-and-execution)  
+   - [4.1 Clone the Repository](#41-clone-the-repository)  
+   - [4.2 Install and Configure golangci-lint](#42-install-and-configure-golangci-lint)  
+   - [4.3 Run Staticcheck for Deep Analysis](#43-run-staticcheck-for-deep-analysis)  
+   - [4.4 Run GoSec for Security Checks](#44-run-gosec-for-security-checks)  
+   - [4.5 Generate and View Reports](#45-generate-and-view-reports)  
+5. [Conclusion](#5-conclusion)  
+6. [Contact Information](#6-contact-information)  
+7. [Reference Table](#7-reference-table)  
 
-  * [Install and Configure golangci-lint](#install-and-configure-golangci-lint)
-  * [Run Staticcheck for Deep Analysis](#run-staticcheck-for-deep-analysis)
-  * [Run GoSec for Security Checks](#run-gosec-for-security-checks)
-  * [Generate and View Reports](#generate-and-view-reports)
-* [Conclusion](#conclusion)
-* [Contact Information](#contact-information)
-* [Reference Table](#reference-table)
+
 
 ---
 
-## Introduction
+## 1. Introduction
 
 This POC demonstrates how to integrate **GoLang linting, static analysis, and security scanning** into a CI pipeline to detect bugs and vulnerabilities **before code is merged**.
 It uses a combination of **golangci-lint** (multi-linter), **Staticcheck** (bug & performance analysis), and **GoSec** (security checks).
 
 ---
 
-## Prerequisites
+## 2. Pre-requisites
 
-* Go 1.20+ installed (`go version`)
-* Access to the Go project (employee-api with go.mod)
-
----
-
-## Bugs Analysis Document
-
-Refer to the detailed [GoLang CI Checks – Bugs Analysis](https://github.com/Snaatak-Cloudops-Crew/documentation/blob/SCRUM-168-Sonal/Applications/CI-Design/GoLang-CI-Checks/Bugs-Analysis/Introduction/README.md) for:
-*"What are CI Checks, Why Important, Workflow Diagram, Tools, Comparison, Advantages, and Best Practices"*.
+| Requirement                  | Description                                      |
+|-------------------------------|-------------------------------------------------|
+| Go Version                     | 1.20+ installed (`go version`)                 |
+| Project Access                 | Access to the Go project (employee-api with go.mod) |
 
 ---
 
-## Step-by-Step Instructions
+## 3. System Requirements
 
-### Install and Configure golangci-lint
+| Requirement  | Minimum                               | Recommended                                  |
+|--------------|--------------------------------------|---------------------------------------------|
+| CPU          | 1 vCPU                                | 2+ vCPU                                     |
+| RAM          | 2 GB                                   | 4+ GB                                       |
+| Disk Space   | 2 GB (for CVE DB cache)               | 5+ GB (for large CVE database + reports)  |
+| OS           | Ubuntu 20.04 LTS / Windows 10 / macOS 12+ | Ubuntu 22.04 LTS / Windows 11 / macOS 13+ |
+
+---
+
+## 4. Setup and Execution
+
+#### 4.1 Clone the Repository
+```
+git clone https://github.com/OT-MICROSERVICES/employee-api.git
+```
+```
+ cd employee-api
+```
+
+## 4.2 Install and Configure golangci-lint
 
 #### Step 1: Install golangci-lint (latest version)
+```
+sudo apt update
+sudo apt install golang-go -y
+```
+
+#### Step 2: Install golangci-lint (latest version)
 
 ```bash
 curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh \
   | sh -s -- -b $(go env GOPATH)/bin v1.54.2
 ```
+<img width="600" height="123" alt="image" src="https://github.com/user-attachments/assets/73d6ef92-0abf-49fc-9245-9e1e5b44b6e1" />
 
-<img width="998" height="128" alt="Screenshot 2025-08-19 122205" src="https://github.com/user-attachments/assets/2414eb9c-2feb-4446-b185-d1526ca93d20" />
+```
+ sudo snap install golangci-lint --classic
+```
+<img width="600" height="50" alt="image" src="https://github.com/user-attachments/assets/6ad63bc6-2fc8-46f5-996d-2a41b7035585" />
 
 
-#### Step 2: Verify Installation
+#### Step 3: Verify Installation
 
 ```bash
 golangci-lint --version
 ```
-
-<img width="727" height="62" alt="Screenshot 2025-08-19 122344" src="https://github.com/user-attachments/assets/e66df965-305a-47b0-a08f-f148164fd740" />
-
+<img width="600" height="55" alt="image" src="https://github.com/user-attachments/assets/509fcad7-1cd5-4ea9-a314-2d5a6e3ed912" />
 
 
-#### Step 3: Run Lint Check
+#### Step 4: Run Lint Check
 
 ```bash
 golangci-lint run ./...
 ```
-<img width="870" height="504" alt="Screenshot 2025-08-19 122714" src="https://github.com/user-attachments/assets/dd9a7f57-2829-48d9-b413-53692ffbeea1" />
-
-
+<img width="600" height="808" alt="image" src="https://github.com/user-attachments/assets/2845d696-dec1-4ed1-be8f-4dcff963a53b" />
 
 ---
 
-### Run Staticcheck for Deep Analysis
+## 4.3 Run Staticcheck for Deep Analysis
 
 
 #### Step 1: Install Staticcheck
 
-```bash
+```
 go install honnef.co/go/tools/cmd/staticcheck@latest
 ```
+```
+ export PATH=$PATH:$(go env GOPATH)/bin
+```
 
-<img width="682" height="156" alt="Screenshot 2025-08-19 122942" src="https://github.com/user-attachments/assets/1c8b5a7f-8968-4ab4-b02a-cd4490d99937" />
+<img width="600" height="212" alt="image" src="https://github.com/user-attachments/assets/24f5b668-b29f-4ea0-86ef-3a18ee54f23c" />
 
 
 #### Step 2: Verify Installation
@@ -98,7 +125,7 @@ go install honnef.co/go/tools/cmd/staticcheck@latest
 ```bash
 staticcheck -version
 ```
-<img width="442" height="53" alt="Screenshot 2025-08-19 124303" src="https://github.com/user-attachments/assets/1f0675dd-2562-42a4-8e82-aa41a9e5625a" />
+<img width="600" height="47" alt="image" src="https://github.com/user-attachments/assets/7833dff7-f1b1-43bb-b39a-0eac912bf728" />
 
 
 
@@ -109,28 +136,23 @@ go mod tidy
 go mod download
 ```
 
-
-
 #### Step 4: Run Analysis
 
 ```bash
 staticcheck ./...
 ```
 
-<img width="642" height="122" alt="Screenshot 2025-08-19 123339" src="https://github.com/user-attachments/assets/1edec6ce-81a6-4e73-a8d9-ee5781fda376" />
-
+<img width="600" height="120" alt="image" src="https://github.com/user-attachments/assets/61fb1e52-d3a0-440b-a051-7c705bcca118" />
 
 ---
 
-### Run GoSec for Security Checks
+## 4.4 Run GoSec for Security Checks
 
 #### Step 1: Install GoSec
 
 ```bash
 go install github.com/securego/gosec/v2/cmd/gosec@latest
 ```
-<img width="708" height="124" alt="Screenshot 2025-08-19 123400" src="https://github.com/user-attachments/assets/13d6b6fa-4c96-4e34-9c0a-2b6a8999cbe5" />
-
 
 
 #### Step 2: Verify Installation
@@ -139,57 +161,62 @@ go install github.com/securego/gosec/v2/cmd/gosec@latest
 gosec --version
 ```
 
+<img width="600" height="89" alt="image" src="https://github.com/user-attachments/assets/ea729475-ceca-4243-9765-2308eaa58d53" />
+
 #### Step 3: Run Security Scan
 
 ```bash
 gosec ./...
 ```
 
-<img width="708" height="465" alt="Screenshot 2025-08-19 123525" src="https://github.com/user-attachments/assets/f87547f4-3ec5-4ac8-bcd4-254dc9c9cf3a" />
+<img width="600" height="727" alt="image" src="https://github.com/user-attachments/assets/c6a67b60-0211-4e29-b370-efe7d5d0f6fe" />
 
-<img width="837" height="678" alt="Screenshot 2025-08-19 123539" src="https://github.com/user-attachments/assets/81735a45-a570-44e5-8308-c32fcd470808" />
-
-<img width="787" height="231" alt="Screenshot 2025-08-19 123549" src="https://github.com/user-attachments/assets/eeb2b728-cc54-442b-baa1-6c18fef9a210" />
+<img width="600" height="958" alt="image" src="https://github.com/user-attachments/assets/0a2067dd-f945-4b59-87c3-3f45e83019d2" />
 
 ---
 
-### Generate and View Reports
+## 4.5 Generate and View Reports
 
-* **golangci-lint** → Shows style & bug issues in terminal output
-* **Staticcheck** → Highlights bugs, performance & unused code
-* **GoSec** → Produces security scan results (can be saved as JSON/HTML)
+| Tool            | Purpose / Output                                         |
+|-----------------|----------------------------------------------------------|
+| golangci-lint   | Shows style and bug issues directly in the terminal output |
+| Staticcheck     | Highlights bugs, performance issues, and unused code    |
+| GoSec           | Produces security scan results (can be saved as JSON/HTML) |
 
 Example saving GoSec report:
 
 ```bash
 gosec -fmt=json -out=gosec-report.json ./...
 ```
+<img width="600" height="710" alt="image" src="https://github.com/user-attachments/assets/c3c59cdb-9adf-45dd-8167-35259e0484c5" />
 
 ---
 
-## Conclusion
+## 5. Conclusion
 
-This POC validated the **bug and security analysis workflow** for the Employee API using:
+| Tool            | Purpose / Output                                               |
+|-----------------|---------------------------------------------------------------|
+| golangci-lint   | Style checks, linting, and detection of unused code          |
+| Staticcheck     | Detection of bugs and performance issues                     |
+| GoSec           | Identification of security vulnerabilities                  |
 
-* **golangci-lint** (style, linting, unused code)
-* **Staticcheck** (bug & performance issues)
-* **GoSec** (security vulnerabilities)
-
-By running these tools locally (and later in CI), teams can **detect redundant code, unhandled errors, and security risks early**, ensuring safer integration with the **frontend React app**.
+**Summary:**  
+Running these tools locally (and later in CI) helps teams **detect redundant code, unhandled errors, and security risks early**, ensuring safer integration with the **frontend React app**.
 
 
-
----
-
-## Contact Information
-
-| Name  | Email                                                                         |
-| ----- | ----------------------------------------------------------------------------- |
-| Sonal | [sonal.roha.snaatak@mygurukulam.co](mailto:sonal.roha.snaatak@mygurukulam.co) |
 
 ---
 
-## Reference Table
+## 6. Contact information
+
+
+| Name| Email Address      | GitHub | URL |
+|-----|--------------------------|-------------|---------|
+| Tina Bhatnagar | [tina.bhatnagar@mygurukulam.co](mailto:tina.bhatnagar@mygurukulam.co)|  tina-snatak  | https://github.com/tina-snatak/ |
+
+---
+
+## 7. Reference Table
 
 | Links                                            | Overview                            |
 | ------------------------------------------------ | ----------------------------------- |
