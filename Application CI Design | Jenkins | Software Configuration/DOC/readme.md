@@ -59,16 +59,16 @@ Roles can be shared via **Ansible Galaxy** or stored locally for internal projec
 
 ## 4. Key Features
 
-| Feature                                           | Description                                                  |
+| Feature                                          | Description                                                  |
 |--------------------------------------------------|--------------------------------------------------------------|
 | Multi-OS Support                                 | Supports installation on multiple Linux distributions (Ubuntu, CentOS, etc.). |
-| Automated Installation & Service Management     | Automates Jenkins package installation and service start/enable. |
+| Automated Installation & Service Management      | Automates Jenkins package installation and service start/enable. |
 | Plugin & Security Configuration                  | Configures Jenkins plugins and security settings via Ansible. |
-| User & Permission Management                      | Manages Jenkins users and permissions setup.                 |
-| Job Creation Automation                           | Supports Jenkins job creation and configuration automation.  |
-| Parameterization                                  | Allows parameterization using variables for flexibility.     |
+| User & Permission Management                     | Manages Jenkins users and permissions setup.                 |
+| Job Creation Automation                          | Supports Jenkins job creation and configuration automation.  |
+| Parameterization                                 | Allows parameterization using variables for flexibility.     |
 | Idempotency                                      | Ensures safe repeated runs without unintended changes.       |
-| Handlers for Service Restart                      | Provides handlers for restarting Jenkins when configs change.|
+| Handlers for Service Restart                     | Provides handlers for restarting Jenkins when configs change.|
 
 ---
 
@@ -124,10 +124,9 @@ This section demonstrates how to set up Jenkins using an **Ansible role** as a p
 | 1         | Use Ansible roles for modular and reusable infrastructure automation.             |
 | 2         | Store sensitive data (e.g., passwords, API tokens) securely using Ansible Vault.  |
 | 3         | Parameterize roles with variables for flexibility.                                |
-| 4         | Use idempotent tasks to prevent unintended changes.                               |
-| 5         | Test roles in staging environments before production deployment.                  |
-| 6         | Document roles clearly with README and examples.                                  |
-| 7         | Keep Jenkins plugins up to date but controlled to prevent compatibility issues.   |
+| 4         | Test roles in staging environments before production deployment.                  |
+| 5         | Document roles clearly with README and examples.                                  |
+| 6         | Keep Jenkins plugins up to date but controlled to prevent compatibility issues.   |
 
 ---
 
