@@ -43,8 +43,6 @@ Roles provide modularity and standardization for infrastructure-as-code automati
 
 An **Ansible Role** is a reusable, modular way to organize automation tasks, variables, handlers, and files in a structured directory format. It helps keep playbooks clean by logically grouping related configurations.
 
-Roles can be shared via **Ansible Galaxy** or stored locally for internal projects.Official documentation: [Ansible Roles Guide](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html)
-
 ---
 
 ## 3. Why Use Jenkins Ansible Role?
