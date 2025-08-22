@@ -1,3 +1,5 @@
+<img width="200" height="363" alt="image" src="https://github.com/user-attachments/assets/c9ad19f3-e3ff-42f0-9cfe-1885619878f2" />
+
 # GoLang CI Checks: Bugs Analysis Documentation 
 
 ---
