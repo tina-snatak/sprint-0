@@ -8,36 +8,36 @@
 
 | **Author**   | **Created on** | **Version** | **Last updated by** | **Last edited on** | **Level** | **Reviewer**  |
 |--------------|----------------|-------------|---------------------|--------------------|-----------|---------------|
-| Tina Bhatnagar  | 21-08-25    | v1.0  |  Tina Bhatnagar |21-08-25     | Internal    | Rohit Chopra    |
+| Tina Bhatnagar  | 22-08-25    | v1.0  |  Tina Bhatnagar |22-08-25     | Internal    | Rohit Chopra    |
 
 ---
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Infra](#infra)
-3. [Important ports](#important-ports)
-4. [Conclusion](#conclusion)
-5. [Contact Information](#contact-information)
-3. [References](#references)
+1. [Introduction](#1-introduction)  
+2. [Infra](#2-infra)  
+3. [Important Ports](#3-important-ports)  
+4. [Conclusion](#4-conclusion)  
+5. [Contact Information](#5-contact-information)  
+6. [References](#6-references)  
+
 
 ---
 
-# Introduction
+## 1. Introduction
 SonarQube is a powerful tool designed to continuously inspect your code quality and security. It performs automatic reviews through static code analysis, identifying bugs, vulnerabilities, and code smells in various programming languages. This documentation give details of infra.
 
 ---
 
-# Infra
+## 2. Infra
 
-
-
+<img width="700" height="659" alt="image" src="https://github.com/user-attachments/assets/ed246941-fd6b-4662-bdd1-1aac285cc6c0" />
 
 
 
 ---
 
-# Important ports
+## 3. Important ports
 
 
 
@@ -50,12 +50,13 @@ SonarQube is a powerful tool designed to continuously inspect your code quality 
 
 ---
 
-# Conclusion
+## 4. Conclusion
+
 SonarQube infrastructure map offers a holistic view of the components that interact within the system, ensuring an effective and scalable solution for continuous code quality monitoring and improvement.
 
 ---
 
-## 6. Contact information
+## 5. Contact information
 
 
 | Name| Email Address      | GitHub | URL |
@@ -67,7 +68,7 @@ SonarQube infrastructure map offers a holistic view of the components that inter
 
 ---
 
-# References
+## 6. References
 
 
 | **Title** | **Link** |
@@ -75,14 +76,3 @@ SonarQube infrastructure map offers a holistic view of the components that inter
 | Sonar Setup|[Link](https://dev.to/sagary2j/sonarqube-infrastructure-setup-using-aws-ec2-and-postgresql-3lpb) |
 |Sonar HA | [link](https://community.sonarsource.com/t/sonarqube-community-edition-high-availability/117618) |
 
-
-
-
-
-
-
-
-
-
-
-Message Yuvraj Poonia
