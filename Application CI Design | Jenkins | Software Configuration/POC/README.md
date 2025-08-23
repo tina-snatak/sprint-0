@@ -1,4 +1,7 @@
-## POC for Jenkins Installation 
+<img width="300" height="280" alt="image" src="https://github.com/user-attachments/assets/fff02623-3dd2-4fb3-83e7-836e83a247a2" />
+
+
+# POC for Jenkins Installation 
 
 ##  Author Information
 
