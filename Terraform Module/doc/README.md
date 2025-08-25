@@ -169,46 +169,46 @@ module "ec2_instance" {
 
 ---
 
-## 11. FAQs 
+## 11. FAQs  
 
-### 1. What is a Terraform Module and why should I use it?
+**Q1. What is a Terraform Module and why should I use it?**  
 A Terraform Module is a container for multiple resources that work together.  
-You should use modules to make your infrastructure **reusable, consistent, scalable, and maintainable**.
+You should use modules to make your infrastructure **reusable, consistent, scalable, and maintainable**.  
 
----
 
-### 2. What is the difference between a root module and a child module?
+
+**Q2. What is the difference between a root module and a child module?**  
 - **Root Module**: The main directory where Terraform commands (`init`, `plan`, `apply`) are executed.  
-- **Child Module**: A sub-directory or external module that is called by the root module.
+- **Child Module**: A sub-directory or external module that is called by the root module.  
 
----
 
-### 3. Can I reuse Terraform modules across multiple projects?
+
+**Q3. Can I reuse Terraform modules across multiple projects?**  
 Yes , Terraform modules are designed for **reusability**.  
-You can version them, store in VCS (GitHub/GitLab/Bitbucket) or publish in **Terraform Registry** to share with teams.
+You can version them, store in VCS (GitHub/GitLab/Bitbucket), or publish in **Terraform Registry** to share with teams.  
 
----
 
-### 4. How do input variables improve module flexibility?
-Input variables make modules **dynamic and customizable**, allowing users to override values (e.g., instance type, region, CIDR blocks) without changing the module code.
 
----
+**Q4. How do input variables improve module flexibility?**  
+Input variables make modules **dynamic and customizable**, allowing users to override values (e.g., instance type, region, CIDR blocks) without changing the module code.  
 
-### 5. How can I share Terraform modules with my team?
+
+
+**Q5. How can I share Terraform modules with my team?**  
 Modules can be shared by:  
-- Storing them in a **Git repository**.  
-- Publishing them in a **private registry**.  
-- Using the official **Terraform Registry** for public modules.
+- Storing them in a **Git repository**  
+- Publishing them in a **private registry**  
+- Using the official **Terraform Registry** for public modules  
+
+
+**Q6. What are the best practices while working with modules?**  
+- Keep modules **small and focused**  
+- Use **version pinning** to avoid breaking changes  
+- Write **clear documentation** in `README.md`  
+- Validate modules using `terraform validate` and CI/CD pipelines  
 
 ---
 
-### 6. What are the best practices while working with modules?
-- Keep modules **small and focused**.  
-- Use **version pinning** to avoid breaking changes.  
-- Write **clear documentation** in `README.md`.  
-- Validate modules using `terraform validate` and CI/CD pipelines.  
-
----
 
 
 ## 12. Contact Information
