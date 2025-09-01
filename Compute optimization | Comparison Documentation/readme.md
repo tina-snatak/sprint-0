@@ -1,3 +1,4 @@
+<img width="300" height="462" alt="image" src="https://github.com/user-attachments/assets/b806c347-e158-4953-aff1-ebcdf1bf4607" />
 
 
 # Compute Optimization: Graviton vs AMD vs Intel  
