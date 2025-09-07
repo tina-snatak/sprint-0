@@ -10,20 +10,21 @@
 
 # Table of Contents  
 
-1. [Introduction](#1-introduction)
-2. [Prerequisites](#2-Prerequisites)
-3. [System Requirements](#3-System-Requirements)
+1. [Introduction](#1-introduction)  
+2. [Prerequisites](#2-prerequisites)  
+3. [System Requirements](#3-system-requirements)  
 4. [Setup Instructions](#4-setup-instructions)  
    4.1 [Install SonarQube Locally](#41-install-sonarqube-locally)  
    4.2 [Configure SonarQube Project](#42-configure-sonarqube-project)  
    4.3 [Install SonarScanner](#43-install-sonarscanner)  
-   4.4 [Create sonar-project.properties](#44-create-sonar-projectproperties)
-   4.5 [Set up quality gates](#45-set-up-quality-gates)
+   4.4 [Create sonar-project.properties](#44-create-sonar-projectproperties)  
+   4.5 [Set up Quality Gates](#45-set-up-quality-gates)  
    4.6 [Run the Analysis](#46-run-the-analysis)  
-6. [Conclusion](#5-conclusion)
-7. [Troubleshooting](#6-Troubleshooting) 
-8. [Contacts](#7-contacts)  
-9. [References](#8-references)  
+5. [Conclusion](#5-conclusion)  
+6. [Troubleshooting](#6-troubleshooting)  
+7. [Contacts](#7-contacts)  
+8. [References](#8-references)  
+
 
 
 
