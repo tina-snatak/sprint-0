@@ -124,7 +124,7 @@ Replace `<YOUR_GENERATED_TOKEN>` with the token you generated in the UI.
 ---
 #### 4.5 Set up quality gates
 
-<img width="700" height="782" alt="image" src="https://github.com/user-attachments/assets/b39b3492-0524-4fde-97af-f8418a21c0d0" />
+<img width="800" height="782" alt="image" src="https://github.com/user-attachments/assets/b39b3492-0524-4fde-97af-f8418a21c0d0" />
 
 
  #### 4.6 Run the Analysis
@@ -145,7 +145,7 @@ sonar-scanner
 http://13.53.138.136:9000/projects
 
 ```
-<img width="600" height="778" alt="image" src="https://github.com/user-attachments/assets/d7035070-9504-4537-9c75-9320f57e6b9a" />
+<img width="800" height="778" alt="image" src="https://github.com/user-attachments/assets/d7035070-9504-4537-9c75-9320f57e6b9a" />
 
 
 **Note**- Change here with your public IP
