@@ -1,0 +1,6 @@
+---
+- name: Install Jenkins on Ubuntu using Ansible role
+  hosts: jenkins_servers
+  become: yes
+  roles:
+    - jenkins

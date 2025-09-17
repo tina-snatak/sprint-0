@@ -1,0 +1,47 @@
+---
+# tasks file for jenkins
+
+- name: Install required dependencies (Java 17 + utils)
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - gnupg
+      - openjdk-17-jdk
+    state: present
+    update_cache: yes
+
+- name: Download Jenkins repo key (latest)
+  ansible.builtin.get_url:
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    dest: /tmp/jenkins.io-2023.key
+    mode: '0644'
+
+- name: Convert Jenkins key to gpg format
+  ansible.builtin.command: >
+    gpg --dearmor -o /usr/share/keyrings/jenkins-keyring.gpg /tmp/jenkins.io-2023.key
+  args:
+    creates: /usr/share/keyrings/jenkins-keyring.gpg
+
+- name: Add Jenkins repository
+  ansible.builtin.copy:
+    dest: /etc/apt/sources.list.d/jenkins.list
+    content: |
+      deb [signed-by=/usr/share/keyrings/jenkins-keyring.gpg] https://pkg.jenkins.io/debian-stable binary/
+    mode: '0644'
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install Jenkins package
+  ansible.builtin.apt:
+    name: jenkins
+    state: present
+  notify: restart jenkins
+
+- name: Ensure Jenkins service is started and enabled
+  ansible.builtin.systemd:
+    name: jenkins
+    enabled: yes
+    state: started
+
