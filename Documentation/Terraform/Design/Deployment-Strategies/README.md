@@ -135,7 +135,7 @@ A **generic deployment strategy** typically involves these steps:
 | Monitor Continuously                     | Track performance, errors, and logs                                 |
 | Have Clear Rollback Plan                  | Ensure fast recovery if deployment fails                            |
 | Incremental Deployment                    | Release changes gradually to reduce risk                            |
-| Documentation                             | Keep deployment steps and procedures well-documented               |
+
 
 ---
 
