@@ -159,7 +159,7 @@ A well-defined deployment strategy ensures reliable, efficient, and low-risk sof
 | Resource                                      | Link                                                                 |
 |-----------------------------------------------|----------------------------------------------------------------------|
 | Deployment Strategies Overview                | [Understanding Deployment Strategies](https://medium.com/@imrancodes/understanding-deployment-strategies-pros-cons-and-implementation-46d416d171f1) |
-| Blue-Green Deployment                          | [Microsoft Azure Architecture](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/blue-green) |
-| Canary Deployment                              | [CloudBees Blog](https://www.cloudbees.com/blog/canary-releases) |
-| A/B Testing in Software                         | [Wikipedia](https://en.wikipedia.org/wiki/A/B_testing) |
+| Blue-Green Deployment                          | [Microsoft Azure Architecture](https://en.wikipedia.org/wiki/Blue%E2%80%93green_deployment) |
+| Canary Deployment                              | [CloudBees Blog](https://semaphore.io/blog/what-is-canary-deployment) |
+| A/B Testing in Software                         | [A/B-Testing](https://www.geeksforgeeks.org/software-testing/a-b-testing-framework/) |
 
